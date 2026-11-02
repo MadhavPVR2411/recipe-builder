@@ -1,0 +1,7 @@
+.env
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.recipe_builder_session.json
