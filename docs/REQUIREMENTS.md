@@ -81,4 +81,5 @@ docs/
 - Is Kubernetes expected to be deployed, or only studied for this phase?
 
 #7. Progress:-
-1) built the database schema, 
+1) The Recipe Database Schema has been built.
+2) Authentication layer started on 2-11-2026
