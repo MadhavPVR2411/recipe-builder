@@ -3,7 +3,7 @@ import uuid
 import pytest
 from fastapi.testclient import TestClient
 
-from app.db import get_cursor
+from app.dao.db import get_cursor
 from app.main import app
 
 client = TestClient(app)
