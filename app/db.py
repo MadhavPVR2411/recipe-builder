@@ -7,7 +7,6 @@ from app import config
 
 
 def connect() -> psycopg.Connection:
-    """Open a new connection; rows come back as dicts."""
     return psycopg.connect(
         host=config.DB_HOST,
         port=config.DB_PORT,
@@ -20,7 +19,6 @@ def connect() -> psycopg.Connection:
 
 @contextmanager
 def get_conn():
-    """Yield a connection; commits on success, rolls back on error, always closes."""
     conn = connect()
     try:
         yield conn
@@ -34,7 +32,6 @@ def get_conn():
 
 @contextmanager
 def get_cursor():
-    """Yield a cursor inside a transaction managed by get_conn()."""
     with get_conn() as conn:
         with conn.cursor() as cur:
             yield cur
