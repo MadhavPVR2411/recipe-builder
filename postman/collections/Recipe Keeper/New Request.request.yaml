@@ -1,0 +1,7 @@
+$kind: http-request
+url: http://127.0.0.1:8000/auth/login
+method: POST
+body:
+  type: json
+  content: '{"username": "madhav"}'
+order: 1000
