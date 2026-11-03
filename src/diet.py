@@ -1,11 +1,3 @@
-"""Diet classification for Recipe Builder.
-
-Three levels, ordered from least to most restrictive to eat:
-    veg  <  egg  <  non_veg
-
-An ingredient gets one level; a recipe takes the highest level of any of its
-ingredients (one chicken stock cube makes the whole recipe non_veg).
-"""
 import re
 
 VEG, EGG, NON_VEG = "veg", "egg", "non_veg"
