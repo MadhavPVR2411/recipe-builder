@@ -53,14 +53,12 @@ def ingredient_diet(name: str) -> str:
 
 
 def recipe_diet(ingredients, tags=None) -> str:
-    """Highest diet level among ingredients; Food.com meat tags force non_veg."""
     level = max((ingredient_diet(i) for i in ingredients), key=RANK.get, default=VEG)
     if tags and MEAT_TAGS & {t.lower() for t in tags}:
         return NON_VEG
     return level
 
 
-# What a user may type at the profile prompt -> stored diet_type value.
 _DIET_ALIASES = {
     "veg": VEG, "vegetarian": VEG,
     "egg": EGG, "eggetarian": EGG, "ovo": EGG,
@@ -69,12 +67,12 @@ _DIET_ALIASES = {
 
 
 def normalize_diet(value: str) -> str | None:
-    """Turn user input like 'Non-Veg' or 'eggetarian' into veg / egg / non_veg."""
+
     return _DIET_ALIASES.get(value.strip().lower())
 
 
 def allowed_diets(preference: str) -> list[str]:
-    """Diet levels a user with this preference may eat (anything at or below theirs)."""
+
     level = normalize_diet(preference)
     if level is None:
         raise ValueError(f"Unknown diet preference: {preference!r}")
