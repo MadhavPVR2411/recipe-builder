@@ -1,10 +1,14 @@
 from datetime import datetime
-
-from sqlalchemy import Text, DateTime, ForeignKey, CheckConstraint, func
-from sqlalchemy.orm import Mapped, mapped_column
-
+from sqlalchemy.orm import Mapped, mapped_column,relationship
+from sqlalchemy import Text, DateTime, ForeignKey, CheckConstraint, Table, Column, func
 from app.models.base import Base
 
+user_allergen = Table(
+    "user_allergen",
+    Base.metadata,
+    Column("user_id", ForeignKey("user.id", ondelete="CASCADE"), primary_key=True),
+    Column("allergen_id", ForeignKey("allergen.id", ondelete="CASCADE"), primary_key=True),
+)
 
 class User(Base):
     __tablename__ = "user"
@@ -12,7 +16,10 @@ class User(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     username: Mapped[str] = mapped_column(Text, unique=True)
     password_hash: Mapped[str] = mapped_column(Text)
-
+    allergens: Mapped[list["Allergen"]] = relationship(
+        secondary=user_allergen,
+        back_populates="users",
+    )
 
 class UserProfile(Base):
     __tablename__ = "user_profile"
