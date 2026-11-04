@@ -1,0 +1,12 @@
+$kind: http-request
+name: Signup
+url: 'http://127.0.0.1:8000/auth/signup'
+method: POST
+order: 2000
+body:
+  type: json
+  content: |-
+    {
+      "username": "testuser",
+      "password": "testpass123"
+    }
