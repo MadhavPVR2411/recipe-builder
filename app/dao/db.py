@@ -1,39 +1,22 @@
 from contextlib import contextmanager
 
-import psycopg
-from psycopg.rows import dict_row
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker, Session
 
 from app.core import config
 
-
-def connect() -> psycopg.Connection:
-
-    return psycopg.connect(
-        host=config.DB_HOST,
-        port=config.DB_PORT,
-        dbname=config.DB_NAME,
-        user=config.DB_USER,
-        password=config.DB_PASSWORD,
-        row_factory=dict_row,
-    )
+engine = create_engine(config.DATABASE_URL, pool_pre_ping=True)
+SessionLocal = sessionmaker(bind=engine, expire_on_commit=False)
 
 
 @contextmanager
-def get_conn():
-
-    conn = connect()
+def get_session():
+    session = SessionLocal()
     try:
-        yield conn
-        conn.commit()
+        yield session
+        session.commit()
     except Exception:
-        conn.rollback()
+        session.rollback()
         raise
     finally:
-        conn.close()
-
-
-@contextmanager
-def get_cursor():
-    with get_conn() as conn:
-        with conn.cursor() as cur:
-            yield cur
+        session.close()

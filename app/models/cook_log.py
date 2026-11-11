@@ -9,5 +9,5 @@ class CookLog(Base):
     __tablename__ = "cook_log"
     id: Mapped[int] = mapped_column(primary_key=True)
     user_id : Mapped[int] = mapped_column(ForeignKey("user.id", ondelete = "CASCADE"))
-    recipe_id : Mapped[int] = mapped_column(ForeignKey("recipe.id", ondelete = "CASCADE"))
+    recipe_id : Mapped[int] = mapped_column(ForeignKey("recipe.id", ondelete = "RESTRICT"))
     cooked_at : Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())

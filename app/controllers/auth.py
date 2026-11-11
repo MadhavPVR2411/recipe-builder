@@ -1,7 +1,8 @@
-from fastapi import APIRouter, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, status
 from app.services import auth as service
 from app.dto.auth import LoginRequest, TokenResponse,SignupRequest,UserResponse
 from app.services.exceptions import InvalidCredentialsException, UsernameAlreadyExistsException
+from app.controllers.deps import get_current_user
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 
@@ -19,3 +20,7 @@ def login(body: LoginRequest) -> TokenResponse:
         return service.login(body.username, body.password)
     except InvalidCredentialsException:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid username or password")
+
+@router.get("/me")
+def me(user: dict = Depends(get_current_user)) -> dict:
+    return user

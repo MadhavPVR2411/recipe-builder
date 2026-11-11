@@ -17,6 +17,13 @@ def create_access_token(user_id:int)-> str:
         "exp": datetime.now(timezone.utc) + expires_delta,
     }
     return jwt.encode(to_encode, config.JWT_SECRET_KEY, algorithm=config.JWT_ALGORITHM)
+def decode_access_token(token: str) -> int:
+    try:
+        payload = jwt.decode(token, config.JWT_SECRET_KEY, algorithms=[config.JWT_ALGORITHM])
+    except jwt.InvalidTokenError:
+        raise InvalidCredentialsException()
+    return int(payload["sub"])
+
 def signup(username:str, password:str) -> UserResponse:
     if dao.find_by_username(username) is not None:
         raise UsernameAlreadyExistsException(username)

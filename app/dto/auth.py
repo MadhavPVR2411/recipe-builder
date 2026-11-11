@@ -4,7 +4,6 @@ from pydantic import BaseModel, Field, field_validator
 
 
 class Credentials(BaseModel):
-    """Shared fields and username cleanup for signup and login."""
     username: str = Field(min_length=3, max_length=50)
     password: str = Field(min_length=8, max_length=72)
 

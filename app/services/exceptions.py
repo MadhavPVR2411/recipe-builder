@@ -8,3 +8,7 @@ class UsernameAlreadyExistsException(ServiceError):
 
 class InvalidCredentialsException(ServiceError):
  pass
+
+
+class AllergenNotFoundException(ServiceError):
+ pass

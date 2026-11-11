@@ -1,37 +1,41 @@
-from app.dao.db import get_cursor
+from datetime import datetime, timezone
+
+from sqlalchemy import select
+
+from app.dao.db import get_session
+from app.models import User, UserProfile
 
 
 def find_by_username(username: str) -> dict | None:
-    with get_cursor() as cur:
-        cur.execute(
-            'SELECT id, username, password_hash FROM "user" WHERE username = %s', (username,)
-        )
-        return cur.fetchone()
+    with get_session() as session:
+        user = session.scalar(select(User).where(User.username == username))
+        if user is None:
+            return None
+        return {"id": user.id, "username": user.username, "password_hash": user.password_hash}
+
 
 def find_by_id(user_id: int) -> dict | None:
-    with get_cursor() as cur:
-        cur.execute('SELECT id, username, FROM "user" WHERE user_id = %s', (user_id,))
-        return cur.fetchone()
+    with get_session() as session:
+        user = session.get(User, user_id)
+        if user is None:
+            return None
+        return {"id": user.id, "username": user.username}
 
-def create_user(username: str, password_hash:str) -> dict:
-    with get_cursor() as cur:
-        cur.execute(
-            'INSERT INTO "user" (username, password_hash) VALUES (%s, %s) RETURNING id, username',
-            (username,password_hash),
-        )
-        user = cur.fetchone()
-        cur.execute(
-            "INSERT INTO user_profile (user_id) VALUES (%s) RETURNING diet_type", (user["id"],))
 
-        profile = cur.fetchone()
-        return {**user, "diet_type": profile["diet_type"]}
+def create_user(username: str, password_hash: str) -> dict:
+    with get_session() as session:
+        user = User(username=username, password_hash=password_hash)
+        session.add(user)
+        session.flush()                        # sends the INSERT now, so user.id gets filled in
+        profile = UserProfile(user_id=user.id)
+        session.add(profile)
+        session.flush()
+        session.refresh(profile)               # reload to pick up the database default diet_type
+        return {"id": user.id, "username": user.username, "diet_type": profile.diet_type}
 
 
 def touch_last_login(user_id: int) -> dict:
-    with get_cursor() as cur:
-        cur.execute(
-            "UPDATE user_profile SET last_login_at = now() WHERE user_id = %s "
-            "RETURNING diet_type, last_login_at",
-            (user_id,),
-        )
-        return cur.fetchone()
+    with get_session() as session:
+        profile = session.get(UserProfile, user_id)
+        profile.last_login_at = datetime.now(timezone.utc)
+        return {"diet_type": profile.diet_type, "last_login_at": profile.last_login_at}
