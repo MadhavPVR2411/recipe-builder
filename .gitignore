@@ -1,7 +1,15 @@
+# secrets
 .env
+
+# python
 __pycache__/
 *.py[cod]
-.pytest_cache/
 .venv/
 venv/
-.recipe_builder_session.json
+.pytest_cache/
+
+# editor / OS / tools
+.idea/
+.DS_Store
+.claude/
+.junie/

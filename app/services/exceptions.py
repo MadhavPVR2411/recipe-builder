@@ -12,3 +12,7 @@ class InvalidCredentialsException(ServiceError):
 
 class AllergenNotFoundException(ServiceError):
  pass
+
+class RecipeNotFoundException(ServiceError):
+ pass
+

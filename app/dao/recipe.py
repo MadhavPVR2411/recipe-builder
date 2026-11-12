@@ -23,6 +23,7 @@ def list_recipes(diet_type: str | None = None, cuisine: str | None = None) -> li
         if cuisine is not None:
             query = query.where(Recipe.cuisine == cuisine)
         return [_summary(r) for r in session.scalars(query).all()]
+    
 
 
 def find_by_id(recipe_id: int) -> dict | None:

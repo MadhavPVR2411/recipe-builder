@@ -27,7 +27,7 @@ allergies and favourite cuisines, and ranked by pantry match and cooking complex
 | R12 | **DAO** and **DTO** layers | Noted as "Dao, Deo" — confirm DTO with mentor |
 | R13 | Programme length | Noted as "8 - 1- weeks" — confirm with mentor |
 
-## 3. Current state vs. target
+## 3. Starting point (Stage 1) vs. target
  
 | Area | Today (Stage 1) | Target |
 |---|---|---|
@@ -76,10 +76,20 @@ docs/
 
 ## 6. Open questions
 
-- Does "Deo" mean DTO?
+- Does "Deo" mean DTO? (Resolved: yes, DTOs are in `app/dto/`.)
 - Is the programme 8 weeks, 10 weeks, or 8–10 weeks?
 - Is Kubernetes expected to be deployed, or only studied for this phase?
 
-#7. Progress:-
-1) The Recipe Database Schema has been built.
-2) Authentication layer started on 2-11-2026
+## 7. Decisions
+
+- R10: manual testing through Swagger and Postman was agreed with the manager. Playwright is deferred.
+- The database layer uses SQLAlchemy ORM with Alembic migrations instead of hand-written SQL files.
+- MVP scope: auth, profile, recipes, pantry, suggestions and Docker. Cooking, expiry alerts and
+  allergen filtering in suggestions come after.
+
+## 8. Progress
+
+1) The recipe database schema has been built.
+2) Authentication layer started on 2-11-2026, with bcrypt passwords and JWT tokens.
+3) Moved to SQLAlchemy ORM and Alembic, with many-to-many relations for user allergens and recipe ingredients.
+4) Profile (diet and allergens) and Recipes (list, filter, detail) are done. Seed data: 73 ingredients, 30 recipes.

@@ -1,6 +1,6 @@
 import pytest
 
-from src.diet import EGG, NON_VEG, VEG, allowed_diets, ingredient_diet, normalize_diet, recipe_diet
+from app.services.diet import EGG, NON_VEG, VEG, allowed_diets, ingredient_diet, normalize_diet, recipe_diet
 
 
 @pytest.mark.parametrize("name, expected", [
