@@ -1,0 +1,5 @@
+$kind: http-request
+name: List allergens
+url: 'http://127.0.0.1:8000/allergens'
+method: GET
+order: 3000

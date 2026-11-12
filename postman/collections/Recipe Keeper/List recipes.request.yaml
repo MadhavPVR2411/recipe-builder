@@ -1,0 +1,5 @@
+$kind: http-request
+name: List recipes
+url: 'http://127.0.0.1:8000/recipes?diet_type=veg'
+method: GET
+order: 4000

@@ -1,0 +1,1846 @@
+[
+  {
+    "name": "Lemon Chickpea Salad",
+    "cuisine": "Mediterranean",
+    "serving": 2,
+    "prep_time": 10,
+    "cook_time": 0,
+    "total_time": 10,
+    "step_count": 4,
+    "diet_type": "veg",
+    "complexity": "easy",
+    "ingredients": [
+      {
+        "name": "chickpea",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "name": "cucumber",
+        "quantity": 1,
+        "unit": "pcs"
+      },
+      {
+        "name": "tomato",
+        "quantity": 2,
+        "unit": "pcs"
+      },
+      {
+        "name": "lemon",
+        "quantity": 1,
+        "unit": "pcs"
+      },
+      {
+        "name": "olive oil",
+        "quantity": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "salt",
+        "quantity": 0.25,
+        "unit": "tsp"
+      }
+    ],
+    "steps": [
+      "Drain the canned chickpea.",
+      "Dice the cucumber and tomato.",
+      "Juice the lemon.",
+      "Toss all ingredients together."
+    ]
+  },
+  {
+    "name": "Garlic Eggplant Skillet",
+    "cuisine": "Mediterranean",
+    "serving": 2,
+    "prep_time": 5,
+    "cook_time": 20,
+    "total_time": 25,
+    "step_count": 5,
+    "diet_type": "veg",
+    "complexity": "easy",
+    "ingredients": [
+      {
+        "name": "eggplant",
+        "quantity": 1,
+        "unit": "pcs"
+      },
+      {
+        "name": "garlic",
+        "quantity": 3,
+        "unit": "pcs"
+      },
+      {
+        "name": "tomato",
+        "quantity": 2,
+        "unit": "pcs"
+      },
+      {
+        "name": "olive oil",
+        "quantity": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "cumin",
+        "quantity": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "name": "salt",
+        "quantity": 0.25,
+        "unit": "tsp"
+      }
+    ],
+    "steps": [
+      "Dice the eggplant and tomato.",
+      "Mince the garlic cloves.",
+      "Heat the olive oil in a skillet.",
+      "Saut\u00e9 the eggplant for 10 minutes.",
+      "Cook with the remaining ingredients for 10 minutes."
+    ]
+  },
+  {
+    "name": "Vegetable Broth Rice",
+    "cuisine": "Mediterranean",
+    "serving": 3,
+    "prep_time": 10,
+    "cook_time": 25,
+    "total_time": 35,
+    "step_count": 6,
+    "diet_type": "veg",
+    "complexity": "medium",
+    "ingredients": [
+      {
+        "name": "rice",
+        "quantity": 1,
+        "unit": "cup"
+      },
+      {
+        "name": "vegetable broth",
+        "quantity": 2,
+        "unit": "cup"
+      },
+      {
+        "name": "onion",
+        "quantity": 1,
+        "unit": "pcs"
+      },
+      {
+        "name": "carrot",
+        "quantity": 1,
+        "unit": "pcs"
+      },
+      {
+        "name": "pea",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "name": "olive oil",
+        "quantity": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "salt",
+        "quantity": 0.25,
+        "unit": "tsp"
+      }
+    ],
+    "steps": [
+      "Rinse the rice.",
+      "Dice the onion and carrot.",
+      "Heat the olive oil in a saucepan.",
+      "Saut\u00e9 the onion and carrot for 5 minutes.",
+      "Add the rice, vegetable broth, pea, and salt.",
+      "Simmer covered for 20 minutes."
+    ]
+  },
+  {
+    "name": "Tomato Lentil Stew",
+    "cuisine": "Mediterranean",
+    "serving": 4,
+    "prep_time": 15,
+    "cook_time": 40,
+    "total_time": 55,
+    "step_count": 9,
+    "diet_type": "veg",
+    "complexity": "hard",
+    "ingredients": [
+      {
+        "name": "lentil",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "name": "onion",
+        "quantity": 1,
+        "unit": "pcs"
+      },
+      {
+        "name": "carrot",
+        "quantity": 2,
+        "unit": "pcs"
+      },
+      {
+        "name": "garlic",
+        "quantity": 3,
+        "unit": "pcs"
+      },
+      {
+        "name": "tomato",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "name": "vegetable broth",
+        "quantity": 1,
+        "unit": "l"
+      },
+      {
+        "name": "olive oil",
+        "quantity": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "cumin",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "paprika",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "salt",
+        "quantity": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "name": "lemon",
+        "quantity": 1,
+        "unit": "pcs"
+      }
+    ],
+    "steps": [
+      "Rinse the lentil.",
+      "Dice the onion, carrot, and tomato.",
+      "Mince the garlic cloves.",
+      "Heat the olive oil in a pot.",
+      "Saut\u00e9 the onion and carrot for 5 minutes.",
+      "Stir in the garlic, cumin, and paprika for 1 minute.",
+      "Add the lentil, tomato, vegetable broth, and salt.",
+      "Simmer for 34 minutes until the lentil is tender.",
+      "Squeeze the lemon over the stew."
+    ]
+  },
+  {
+    "name": "Spinach Potato Curry",
+    "cuisine": "Indian",
+    "serving": 3,
+    "prep_time": 10,
+    "cook_time": 30,
+    "total_time": 40,
+    "step_count": 8,
+    "diet_type": "veg",
+    "complexity": "medium",
+    "ingredients": [
+      {
+        "name": "potato",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "name": "spinach",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "name": "onion",
+        "quantity": 1,
+        "unit": "pcs"
+      },
+      {
+        "name": "garlic",
+        "quantity": 2,
+        "unit": "pcs"
+      },
+      {
+        "name": "tomato",
+        "quantity": 2,
+        "unit": "pcs"
+      },
+      {
+        "name": "sunflower oil",
+        "quantity": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "cumin",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "turmeric",
+        "quantity": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "name": "water",
+        "quantity": 200,
+        "unit": "ml"
+      },
+      {
+        "name": "salt",
+        "quantity": 0.5,
+        "unit": "tsp"
+      }
+    ],
+    "steps": [
+      "Dice the potato, onion, and tomato.",
+      "Mince the garlic cloves.",
+      "Heat the sunflower oil in a saucepan.",
+      "Saut\u00e9 the onion and garlic for 5 minutes.",
+      "Stir in the cumin and turmeric.",
+      "Add the potato, tomato, water, and salt.",
+      "Simmer covered for 20 minutes until the potato is tender.",
+      "Cook with the spinach for 5 minutes."
+    ]
+  },
+  {
+    "name": "Mushroom Barley Pot",
+    "cuisine": "Italian",
+    "serving": 4,
+    "prep_time": 10,
+    "cook_time": 50,
+    "total_time": 60,
+    "step_count": 9,
+    "diet_type": "veg",
+    "complexity": "hard",
+    "ingredients": [
+      {
+        "name": "barley",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "name": "mushroom",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "name": "onion",
+        "quantity": 1,
+        "unit": "pcs"
+      },
+      {
+        "name": "garlic",
+        "quantity": 3,
+        "unit": "pcs"
+      },
+      {
+        "name": "vegetable broth",
+        "quantity": 1,
+        "unit": "l"
+      },
+      {
+        "name": "olive oil",
+        "quantity": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "thyme",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "salt",
+        "quantity": 0.25,
+        "unit": "tsp"
+      }
+    ],
+    "steps": [
+      "Rinse the pearl barley.",
+      "Slice the mushroom.",
+      "Dice the onion.",
+      "Mince the garlic cloves.",
+      "Heat the olive oil in a pot.",
+      "Saut\u00e9 the onion and mushroom for 8 minutes.",
+      "Cook with the garlic and thyme for 2 minutes.",
+      "Add the barley, vegetable broth, and salt.",
+      "Simmer covered for 40 minutes until the barley is tender."
+    ]
+  },
+  {
+    "name": "Smoky Bean Chili",
+    "cuisine": "Mexican",
+    "serving": 6,
+    "prep_time": 15,
+    "cook_time": 45,
+    "total_time": 60,
+    "step_count": 8,
+    "diet_type": "veg",
+    "complexity": "medium",
+    "ingredients": [
+      {
+        "name": "kidney bean",
+        "quantity": 800,
+        "unit": "g"
+      },
+      {
+        "name": "tomato",
+        "quantity": 600,
+        "unit": "g"
+      },
+      {
+        "name": "onion",
+        "quantity": 2,
+        "unit": "pcs"
+      },
+      {
+        "name": "bell pepper",
+        "quantity": 2,
+        "unit": "pcs"
+      },
+      {
+        "name": "garlic",
+        "quantity": 4,
+        "unit": "pcs"
+      },
+      {
+        "name": "corn",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "name": "vegetable broth",
+        "quantity": 300,
+        "unit": "ml"
+      },
+      {
+        "name": "olive oil",
+        "quantity": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "cumin",
+        "quantity": 2,
+        "unit": "tsp"
+      },
+      {
+        "name": "paprika",
+        "quantity": 2,
+        "unit": "tsp"
+      },
+      {
+        "name": "chili powder",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "salt",
+        "quantity": 0.75,
+        "unit": "tsp"
+      }
+    ],
+    "steps": [
+      "Drain the canned kidney bean.",
+      "Dice the onion, bell pepper, and tomato.",
+      "Mince the garlic cloves.",
+      "Heat the olive oil in a pot.",
+      "Saut\u00e9 the onion and bell pepper for 8 minutes.",
+      "Cook with the garlic, cumin, paprika, and chili powder for 2 minutes.",
+      "Add the kidney bean, tomato, corn, vegetable broth, and salt.",
+      "Simmer for 35 minutes."
+    ]
+  },
+  {
+    "name": "Cucumber Hummus Wrap",
+    "cuisine": "Mediterranean",
+    "serving": 1,
+    "prep_time": 10,
+    "cook_time": 0,
+    "total_time": 10,
+    "step_count": 4,
+    "diet_type": "veg",
+    "complexity": "easy",
+    "ingredients": [
+      {
+        "name": "tortilla",
+        "quantity": 1,
+        "unit": "pcs"
+      },
+      {
+        "name": "hummus",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "name": "cucumber",
+        "quantity": 0.5,
+        "unit": "pcs"
+      },
+      {
+        "name": "tomato",
+        "quantity": 1,
+        "unit": "pcs"
+      },
+      {
+        "name": "lettuce",
+        "quantity": 20,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "Slice the cucumber and tomato.",
+      "Spread the hummus over the tortilla.",
+      "Layer the lettuce, cucumber, and tomato over the hummus.",
+      "Roll the tortilla tightly."
+    ]
+  },
+  {
+    "name": "Sesame Broccoli Noodles",
+    "cuisine": "Chinese",
+    "serving": 2,
+    "prep_time": 5,
+    "cook_time": 15,
+    "total_time": 20,
+    "step_count": 5,
+    "diet_type": "veg",
+    "complexity": "easy",
+    "ingredients": [
+      {
+        "name": "rice noodle",
+        "quantity": 180,
+        "unit": "g"
+      },
+      {
+        "name": "broccoli",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "name": "soy sauce",
+        "quantity": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "sesame oil",
+        "quantity": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "sesame seed",
+        "quantity": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "water",
+        "quantity": 1.5,
+        "unit": "l"
+      }
+    ],
+    "steps": [
+      "Cut the broccoli into small florets.",
+      "Boil the broccoli in the water for 5 minutes.",
+      "Cook the rice noodle in the same pot according to its package timing.",
+      "Drain the pot.",
+      "Toss with the soy sauce, sesame oil, and sesame seed."
+    ]
+  },
+  {
+    "name": "Coconut Chickpea Curry",
+    "cuisine": "Indian",
+    "serving": 4,
+    "prep_time": 10,
+    "cook_time": 25,
+    "total_time": 35,
+    "step_count": 8,
+    "diet_type": "veg",
+    "complexity": "medium",
+    "ingredients": [
+      {
+        "name": "chickpea",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "name": "coconut milk",
+        "quantity": 400,
+        "unit": "ml"
+      },
+      {
+        "name": "onion",
+        "quantity": 1,
+        "unit": "pcs"
+      },
+      {
+        "name": "tomato",
+        "quantity": 2,
+        "unit": "pcs"
+      },
+      {
+        "name": "garlic",
+        "quantity": 3,
+        "unit": "pcs"
+      },
+      {
+        "name": "ginger",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "name": "spinach",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "name": "sunflower oil",
+        "quantity": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "curry powder",
+        "quantity": 2,
+        "unit": "tsp"
+      },
+      {
+        "name": "salt",
+        "quantity": 0.5,
+        "unit": "tsp"
+      }
+    ],
+    "steps": [
+      "Drain the canned chickpea.",
+      "Dice the onion and tomato.",
+      "Mince the garlic and ginger.",
+      "Heat the sunflower oil in a saucepan.",
+      "Saut\u00e9 the onion, garlic, and ginger for 5 minutes.",
+      "Add the tomato, chickpea, coconut milk, curry powder, and salt.",
+      "Simmer for 17 minutes.",
+      "Cook with the spinach for 3 minutes."
+    ]
+  },
+  {
+    "name": "Tomato Egg Scramble",
+    "cuisine": "Chinese",
+    "serving": 1,
+    "prep_time": 5,
+    "cook_time": 5,
+    "total_time": 10,
+    "step_count": 5,
+    "diet_type": "egg",
+    "complexity": "easy",
+    "ingredients": [
+      {
+        "name": "egg",
+        "quantity": 2,
+        "unit": "pcs"
+      },
+      {
+        "name": "tomato",
+        "quantity": 1,
+        "unit": "pcs"
+      },
+      {
+        "name": "sunflower oil",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "salt",
+        "quantity": 0.125,
+        "unit": "tsp"
+      }
+    ],
+    "steps": [
+      "Dice the tomato.",
+      "Beat the egg with the salt.",
+      "Heat the sunflower oil in a skillet.",
+      "Saut\u00e9 the tomato for 2 minutes.",
+      "Scramble the egg mixture with the tomato until set."
+    ]
+  },
+  {
+    "name": "Pea Egg Fried Rice",
+    "cuisine": "Chinese",
+    "serving": 2,
+    "prep_time": 5,
+    "cook_time": 10,
+    "total_time": 15,
+    "step_count": 5,
+    "diet_type": "egg",
+    "complexity": "easy",
+    "ingredients": [
+      {
+        "name": "rice",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "name": "egg",
+        "quantity": 2,
+        "unit": "pcs"
+      },
+      {
+        "name": "pea",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "name": "soy sauce",
+        "quantity": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "sunflower oil",
+        "quantity": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "sesame oil",
+        "quantity": 1,
+        "unit": "tsp"
+      }
+    ],
+    "steps": [
+      "Beat the egg.",
+      "Heat the sunflower oil in a wok.",
+      "Scramble the egg until set.",
+      "Stir-fry with refrigerated cooked rice and thawed pea for 6 minutes until steaming.",
+      "Toss with the soy sauce and sesame oil."
+    ]
+  },
+  {
+    "name": "Spinach Cheese Omelet",
+    "cuisine": "French",
+    "serving": 1,
+    "prep_time": 5,
+    "cook_time": 10,
+    "total_time": 15,
+    "step_count": 5,
+    "diet_type": "egg",
+    "complexity": "easy",
+    "ingredients": [
+      {
+        "name": "egg",
+        "quantity": 2,
+        "unit": "pcs"
+      },
+      {
+        "name": "spinach",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "name": "cheddar",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "name": "butter",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "salt",
+        "quantity": 0.125,
+        "unit": "tsp"
+      }
+    ],
+    "steps": [
+      "Beat the egg with the salt.",
+      "Melt the butter in a skillet.",
+      "Wilt the spinach for 2 minutes.",
+      "Cook the egg mixture over the spinach until set.",
+      "Fold the omelet around the crumbled cheddar."
+    ]
+  },
+  {
+    "name": "Pepper Shakshuka",
+    "cuisine": "Mediterranean",
+    "serving": 3,
+    "prep_time": 10,
+    "cook_time": 30,
+    "total_time": 40,
+    "step_count": 8,
+    "diet_type": "egg",
+    "complexity": "medium",
+    "ingredients": [
+      {
+        "name": "egg",
+        "quantity": 6,
+        "unit": "pcs"
+      },
+      {
+        "name": "tomato",
+        "quantity": 600,
+        "unit": "g"
+      },
+      {
+        "name": "onion",
+        "quantity": 1,
+        "unit": "pcs"
+      },
+      {
+        "name": "bell pepper",
+        "quantity": 1,
+        "unit": "pcs"
+      },
+      {
+        "name": "garlic",
+        "quantity": 3,
+        "unit": "pcs"
+      },
+      {
+        "name": "olive oil",
+        "quantity": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "cumin",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "paprika",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "salt",
+        "quantity": 0.5,
+        "unit": "tsp"
+      }
+    ],
+    "steps": [
+      "Dice the tomato, onion, and bell pepper.",
+      "Mince the garlic cloves.",
+      "Heat the olive oil in a skillet.",
+      "Saut\u00e9 the onion and bell pepper for 7 minutes.",
+      "Cook with the garlic, cumin, and paprika for 1 minute.",
+      "Simmer with the tomato and salt for 12 minutes.",
+      "Crack the egg into six wells in the sauce.",
+      "Cook covered for 10 minutes until the egg is set."
+    ]
+  },
+  {
+    "name": "Potato Mushroom Frittata",
+    "cuisine": "Italian",
+    "serving": 4,
+    "prep_time": 15,
+    "cook_time": 40,
+    "total_time": 55,
+    "step_count": 10,
+    "diet_type": "egg",
+    "complexity": "hard",
+    "ingredients": [
+      {
+        "name": "egg",
+        "quantity": 8,
+        "unit": "pcs"
+      },
+      {
+        "name": "potato",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "name": "mushroom",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "name": "onion",
+        "quantity": 1,
+        "unit": "pcs"
+      },
+      {
+        "name": "milk",
+        "quantity": 60,
+        "unit": "ml"
+      },
+      {
+        "name": "cheddar",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "name": "olive oil",
+        "quantity": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "salt",
+        "quantity": 0.5,
+        "unit": "tsp"
+      }
+    ],
+    "steps": [
+      "Preheat the oven to 180\u00b0C.",
+      "Slice the potato, mushroom, and onion thinly.",
+      "Grate the cheddar.",
+      "Whisk the egg, milk, and salt.",
+      "Heat the olive oil in an ovenproof skillet.",
+      "Saut\u00e9 the potato and onion for 15 minutes until tender.",
+      "Cook with the mushroom for 5 minutes.",
+      "Pour the egg mixture into the skillet.",
+      "Scatter the cheddar over the surface.",
+      "Bake for 20 minutes until the center is set."
+    ]
+  },
+  {
+    "name": "Mustard Mayonnaise Potato Salad",
+    "cuisine": "American",
+    "serving": 4,
+    "prep_time": 15,
+    "cook_time": 20,
+    "total_time": 35,
+    "step_count": 8,
+    "diet_type": "egg",
+    "complexity": "medium",
+    "ingredients": [
+      {
+        "name": "potato",
+        "quantity": 600,
+        "unit": "g"
+      },
+      {
+        "name": "mayonnaise",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "name": "mustard",
+        "quantity": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "onion",
+        "quantity": 0.5,
+        "unit": "pcs"
+      },
+      {
+        "name": "celery",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "name": "lemon",
+        "quantity": 0.5,
+        "unit": "pcs"
+      },
+      {
+        "name": "salt",
+        "quantity": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "name": "water",
+        "quantity": 1.5,
+        "unit": "l"
+      }
+    ],
+    "steps": [
+      "Cut the potato into small cubes.",
+      "Boil the potato in the water for 15 minutes until tender.",
+      "Drain the potato.",
+      "Cool the potato under running water.",
+      "Dice the onion and celery.",
+      "Juice the lemon.",
+      "Mix the mayonnaise, mustard, lemon juice, and salt.",
+      "Toss the potato, onion, and celery with the dressing."
+    ]
+  },
+  {
+    "name": "Egg Salad Sandwich",
+    "cuisine": "American",
+    "serving": 2,
+    "prep_time": 10,
+    "cook_time": 10,
+    "total_time": 20,
+    "step_count": 5,
+    "diet_type": "egg",
+    "complexity": "easy",
+    "ingredients": [
+      {
+        "name": "egg",
+        "quantity": 3,
+        "unit": "pcs"
+      },
+      {
+        "name": "bread",
+        "quantity": 4,
+        "unit": "pcs"
+      },
+      {
+        "name": "mayonnaise",
+        "quantity": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "mustard",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "water",
+        "quantity": 1,
+        "unit": "l"
+      }
+    ],
+    "steps": [
+      "Boil the egg in the water for 10 minutes.",
+      "Cool the egg under running water.",
+      "Peel the egg.",
+      "Mash the egg with the mayonnaise and mustard.",
+      "Sandwich the mixture between the bread slices."
+    ]
+  },
+  {
+    "name": "Vanilla Baked Rice Custard",
+    "cuisine": "British",
+    "serving": 6,
+    "prep_time": 10,
+    "cook_time": 50,
+    "total_time": 60,
+    "step_count": 8,
+    "diet_type": "egg",
+    "complexity": "medium",
+    "ingredients": [
+      {
+        "name": "rice",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "name": "egg",
+        "quantity": 3,
+        "unit": "pcs"
+      },
+      {
+        "name": "milk",
+        "quantity": 600,
+        "unit": "ml"
+      },
+      {
+        "name": "sugar",
+        "quantity": 75,
+        "unit": "g"
+      },
+      {
+        "name": "vanilla extract",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "cinnamon",
+        "quantity": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "name": "butter",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "name": "raisin",
+        "quantity": 50,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "Preheat the oven to 160\u00b0C.",
+      "Grease a shallow baking dish with the butter.",
+      "Whisk the egg with the sugar.",
+      "Whisk in the milk and vanilla extract.",
+      "Fold in refrigerated cooked rice and the raisin.",
+      "Pour the mixture into the baking dish.",
+      "Sprinkle the cinnamon over the surface.",
+      "Bake for 50 minutes until the center is set."
+    ]
+  },
+  {
+    "name": "Cinnamon French Toast",
+    "cuisine": "French",
+    "serving": 2,
+    "prep_time": 5,
+    "cook_time": 10,
+    "total_time": 15,
+    "step_count": 5,
+    "diet_type": "egg",
+    "complexity": "easy",
+    "ingredients": [
+      {
+        "name": "bread",
+        "quantity": 4,
+        "unit": "pcs"
+      },
+      {
+        "name": "egg",
+        "quantity": 2,
+        "unit": "pcs"
+      },
+      {
+        "name": "milk",
+        "quantity": 80,
+        "unit": "ml"
+      },
+      {
+        "name": "cinnamon",
+        "quantity": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "name": "butter",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "name": "maple syrup",
+        "quantity": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "steps": [
+      "Whisk the egg, milk, and cinnamon.",
+      "Dip the bread slices into the egg mixture.",
+      "Melt the butter in a skillet.",
+      "Fry the bread for 4 minutes per side until the coating is set.",
+      "Drizzle with the maple syrup."
+    ]
+  },
+  {
+    "name": "Onion Tomato Egg Curry",
+    "cuisine": "Indian",
+    "serving": 4,
+    "prep_time": 15,
+    "cook_time": 40,
+    "total_time": 55,
+    "step_count": 10,
+    "diet_type": "egg",
+    "complexity": "hard",
+    "ingredients": [
+      {
+        "name": "egg",
+        "quantity": 8,
+        "unit": "pcs"
+      },
+      {
+        "name": "onion",
+        "quantity": 2,
+        "unit": "pcs"
+      },
+      {
+        "name": "tomato",
+        "quantity": 3,
+        "unit": "pcs"
+      },
+      {
+        "name": "garlic",
+        "quantity": 4,
+        "unit": "pcs"
+      },
+      {
+        "name": "ginger",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "name": "sunflower oil",
+        "quantity": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "cumin",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "turmeric",
+        "quantity": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "name": "coriander",
+        "quantity": 2,
+        "unit": "tsp"
+      },
+      {
+        "name": "chili powder",
+        "quantity": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "name": "salt",
+        "quantity": 0.75,
+        "unit": "tsp"
+      },
+      {
+        "name": "water",
+        "quantity": 1.5,
+        "unit": "l"
+      }
+    ],
+    "steps": [
+      "Boil the egg in 1.2 l of the water for 10 minutes.",
+      "Cool the egg under running water.",
+      "Peel the egg.",
+      "Dice the onion and tomato.",
+      "Mince the garlic and ginger.",
+      "Heat the sunflower oil in a saucepan.",
+      "Saut\u00e9 the onion, garlic, and ginger for 8 minutes.",
+      "Cook with the tomato, cumin, turmeric, coriander, chili powder, and salt for 10 minutes.",
+      "Add the egg and remaining water.",
+      "Simmer for 12 minutes."
+    ]
+  },
+  {
+    "name": "Lime Chicken Skillet",
+    "cuisine": "Mexican",
+    "serving": 2,
+    "prep_time": 10,
+    "cook_time": 15,
+    "total_time": 25,
+    "step_count": 5,
+    "diet_type": "non_veg",
+    "complexity": "easy",
+    "ingredients": [
+      {
+        "name": "chicken",
+        "quantity": 350,
+        "unit": "g"
+      },
+      {
+        "name": "bell pepper",
+        "quantity": 1,
+        "unit": "pcs"
+      },
+      {
+        "name": "lime",
+        "quantity": 1,
+        "unit": "pcs"
+      },
+      {
+        "name": "olive oil",
+        "quantity": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "cumin",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "salt",
+        "quantity": 0.5,
+        "unit": "tsp"
+      }
+    ],
+    "steps": [
+      "Cut the chicken and bell pepper into thin strips.",
+      "Coat the chicken with the olive oil, cumin, and salt.",
+      "Heat a skillet over medium heat.",
+      "Saut\u00e9 the chicken and bell pepper for 15 minutes until the chicken reaches 74\u00b0C.",
+      "Squeeze the lime over the skillet."
+    ]
+  },
+  {
+    "name": "Salmon Rice Bowl",
+    "cuisine": "Japanese",
+    "serving": 2,
+    "prep_time": 10,
+    "cook_time": 30,
+    "total_time": 40,
+    "step_count": 8,
+    "diet_type": "non_veg",
+    "complexity": "medium",
+    "ingredients": [
+      {
+        "name": "salmon",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "name": "rice",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "name": "water",
+        "quantity": 300,
+        "unit": "ml"
+      },
+      {
+        "name": "cucumber",
+        "quantity": 1,
+        "unit": "pcs"
+      },
+      {
+        "name": "soy sauce",
+        "quantity": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "sesame oil",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "sesame seed",
+        "quantity": 1,
+        "unit": "tsp"
+      }
+    ],
+    "steps": [
+      "Rinse the rice.",
+      "Simmer the rice in the water for 18 minutes.",
+      "Slice the cucumber.",
+      "Heat the sesame oil in a skillet.",
+      "Pan-fry the salmon for 10 minutes until it reaches 63\u00b0C.",
+      "Divide the rice, salmon, and cucumber between bowls.",
+      "Drizzle with the soy sauce.",
+      "Sprinkle with the sesame seed."
+    ]
+  },
+  {
+    "name": "Shrimp Fish Sauce Noodles",
+    "cuisine": "Thai",
+    "serving": 2,
+    "prep_time": 10,
+    "cook_time": 10,
+    "total_time": 20,
+    "step_count": 5,
+    "diet_type": "non_veg",
+    "complexity": "easy",
+    "ingredients": [
+      {
+        "name": "rice noodle",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "name": "shrimp",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "name": "fish sauce",
+        "quantity": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "lime",
+        "quantity": 1,
+        "unit": "pcs"
+      },
+      {
+        "name": "sunflower oil",
+        "quantity": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "water",
+        "quantity": 1,
+        "unit": "l"
+      }
+    ],
+    "steps": [
+      "Soak the rice noodle in the hot water according to its package timing.",
+      "Drain the rice noodle.",
+      "Heat the sunflower oil in a wok.",
+      "Stir-fry peeled shrimp for 4 minutes until opaque.",
+      "Toss with the rice noodle, fish sauce, and juice from the lime."
+    ]
+  },
+  {
+    "name": "Beef Root Vegetable Stew",
+    "cuisine": "British",
+    "serving": 6,
+    "prep_time": 20,
+    "cook_time": 120,
+    "total_time": 140,
+    "step_count": 10,
+    "diet_type": "non_veg",
+    "complexity": "hard",
+    "ingredients": [
+      {
+        "name": "beef",
+        "quantity": 0.8,
+        "unit": "kg"
+      },
+      {
+        "name": "potato",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "name": "carrot",
+        "quantity": 3,
+        "unit": "pcs"
+      },
+      {
+        "name": "onion",
+        "quantity": 2,
+        "unit": "pcs"
+      },
+      {
+        "name": "garlic",
+        "quantity": 4,
+        "unit": "pcs"
+      },
+      {
+        "name": "tomato paste",
+        "quantity": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "beef broth",
+        "quantity": 1,
+        "unit": "l"
+      },
+      {
+        "name": "flour",
+        "quantity": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "olive oil",
+        "quantity": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "thyme",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "bay leaf",
+        "quantity": 1,
+        "unit": "pcs"
+      },
+      {
+        "name": "salt",
+        "quantity": 0.75,
+        "unit": "tsp"
+      }
+    ],
+    "steps": [
+      "Cube the beef, potato, carrot, and onion.",
+      "Mince the garlic cloves.",
+      "Coat the beef with the flour and salt.",
+      "Heat the olive oil in a heavy pot.",
+      "Brown the beef in batches for 10 minutes.",
+      "Saut\u00e9 with the onion and garlic for 5 minutes.",
+      "Stir in the tomato paste.",
+      "Add the beef broth, thyme, and bay leaf.",
+      "Simmer covered for 75 minutes.",
+      "Simmer with the potato and carrot for 30 minutes until tender."
+    ]
+  },
+  {
+    "name": "Braised Pork Tacos",
+    "cuisine": "Mexican",
+    "serving": 4,
+    "prep_time": 15,
+    "cook_time": 90,
+    "total_time": 105,
+    "step_count": 10,
+    "diet_type": "non_veg",
+    "complexity": "hard",
+    "ingredients": [
+      {
+        "name": "pork",
+        "quantity": 600,
+        "unit": "g"
+      },
+      {
+        "name": "tortilla",
+        "quantity": 8,
+        "unit": "pcs"
+      },
+      {
+        "name": "onion",
+        "quantity": 1,
+        "unit": "pcs"
+      },
+      {
+        "name": "garlic",
+        "quantity": 3,
+        "unit": "pcs"
+      },
+      {
+        "name": "orange",
+        "quantity": 1,
+        "unit": "pcs"
+      },
+      {
+        "name": "lime",
+        "quantity": 1,
+        "unit": "pcs"
+      },
+      {
+        "name": "cumin",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "oregano",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "sunflower oil",
+        "quantity": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "water",
+        "quantity": 300,
+        "unit": "ml"
+      },
+      {
+        "name": "salt",
+        "quantity": 0.75,
+        "unit": "tsp"
+      }
+    ],
+    "steps": [
+      "Cube the pork shoulder and onion.",
+      "Mince the garlic cloves.",
+      "Juice the orange and lime.",
+      "Heat the sunflower oil in a heavy pot.",
+      "Brown the pork for 8 minutes.",
+      "Add the onion, garlic, citrus juice, cumin, oregano, water, and salt.",
+      "Braise covered over low heat for 80 minutes until tender.",
+      "Shred the pork with forks.",
+      "Warm the tortilla in a skillet.",
+      "Fill the tortilla with the pork mixture."
+    ]
+  },
+  {
+    "name": "Tuna Mayonnaise Cucumber Salad",
+    "cuisine": "American",
+    "serving": 2,
+    "prep_time": 10,
+    "cook_time": 0,
+    "total_time": 10,
+    "step_count": 4,
+    "diet_type": "non_veg",
+    "complexity": "easy",
+    "ingredients": [
+      {
+        "name": "tuna",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "name": "mayonnaise",
+        "quantity": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "cucumber",
+        "quantity": 1,
+        "unit": "pcs"
+      },
+      {
+        "name": "onion",
+        "quantity": 0.25,
+        "unit": "pcs"
+      },
+      {
+        "name": "lemon",
+        "quantity": 0.5,
+        "unit": "pcs"
+      },
+      {
+        "name": "salt",
+        "quantity": 0.125,
+        "unit": "tsp"
+      }
+    ],
+    "steps": [
+      "Drain the canned tuna.",
+      "Dice the cucumber and onion.",
+      "Juice the lemon.",
+      "Mix all ingredients together."
+    ]
+  },
+  {
+    "name": "Chicken Carrot Pilaf",
+    "cuisine": "Middle Eastern",
+    "serving": 6,
+    "prep_time": 20,
+    "cook_time": 40,
+    "total_time": 60,
+    "step_count": 9,
+    "diet_type": "non_veg",
+    "complexity": "hard",
+    "ingredients": [
+      {
+        "name": "chicken",
+        "quantity": 600,
+        "unit": "g"
+      },
+      {
+        "name": "rice",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "name": "onion",
+        "quantity": 2,
+        "unit": "pcs"
+      },
+      {
+        "name": "carrot",
+        "quantity": 2,
+        "unit": "pcs"
+      },
+      {
+        "name": "garlic",
+        "quantity": 4,
+        "unit": "pcs"
+      },
+      {
+        "name": "chicken broth",
+        "quantity": 800,
+        "unit": "ml"
+      },
+      {
+        "name": "olive oil",
+        "quantity": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "cumin",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "cinnamon",
+        "quantity": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "name": "raisin",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "name": "salt",
+        "quantity": 0.5,
+        "unit": "tsp"
+      }
+    ],
+    "steps": [
+      "Rinse the rice.",
+      "Cube the boneless chicken.",
+      "Dice the onion and carrot.",
+      "Mince the garlic cloves.",
+      "Heat the olive oil in a heavy pot.",
+      "Brown the chicken for 8 minutes.",
+      "Saut\u00e9 with the onion, carrot, and garlic for 7 minutes.",
+      "Add the rice, chicken broth, cumin, cinnamon, raisin, and salt.",
+      "Simmer covered for 25 minutes until the rice is tender and the chicken reaches 74\u00b0C."
+    ]
+  },
+  {
+    "name": "Cod Tomato Stew",
+    "cuisine": "Mediterranean",
+    "serving": 3,
+    "prep_time": 10,
+    "cook_time": 25,
+    "total_time": 35,
+    "step_count": 8,
+    "diet_type": "non_veg",
+    "complexity": "medium",
+    "ingredients": [
+      {
+        "name": "cod",
+        "quantity": 450,
+        "unit": "g"
+      },
+      {
+        "name": "tomato",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "name": "onion",
+        "quantity": 1,
+        "unit": "pcs"
+      },
+      {
+        "name": "garlic",
+        "quantity": 3,
+        "unit": "pcs"
+      },
+      {
+        "name": "vegetable broth",
+        "quantity": 250,
+        "unit": "ml"
+      },
+      {
+        "name": "olive oil",
+        "quantity": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "paprika",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "salt",
+        "quantity": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "name": "parsley",
+        "quantity": 10,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "Dice the tomato and onion.",
+      "Mince the garlic and parsley.",
+      "Cut the cod into large chunks.",
+      "Heat the olive oil in a saucepan.",
+      "Saut\u00e9 the onion and garlic for 5 minutes.",
+      "Simmer with the tomato, vegetable broth, paprika, and salt for 10 minutes.",
+      "Poach the cod in the sauce for 10 minutes until it reaches 63\u00b0C.",
+      "Sprinkle with the parsley."
+    ]
+  },
+  {
+    "name": "Turkey Meatballs in Tomato Sauce",
+    "cuisine": "Italian",
+    "serving": 8,
+    "prep_time": 25,
+    "cook_time": 35,
+    "total_time": 60,
+    "step_count": 10,
+    "diet_type": "non_veg",
+    "complexity": "hard",
+    "ingredients": [
+      {
+        "name": "turkey",
+        "quantity": 1,
+        "unit": "kg"
+      },
+      {
+        "name": "egg",
+        "quantity": 2,
+        "unit": "pcs"
+      },
+      {
+        "name": "breadcrumb",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "name": "milk",
+        "quantity": 100,
+        "unit": "ml"
+      },
+      {
+        "name": "onion",
+        "quantity": 1,
+        "unit": "pcs"
+      },
+      {
+        "name": "garlic",
+        "quantity": 4,
+        "unit": "pcs"
+      },
+      {
+        "name": "tomato",
+        "quantity": 800,
+        "unit": "g"
+      },
+      {
+        "name": "olive oil",
+        "quantity": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "oregano",
+        "quantity": 2,
+        "unit": "tsp"
+      },
+      {
+        "name": "salt",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "water",
+        "quantity": 200,
+        "unit": "ml"
+      }
+    ],
+    "steps": [
+      "Mince the onion and garlic.",
+      "Crush the canned tomato.",
+      "Soak the breadcrumb in the milk for 5 minutes.",
+      "Mix the ground turkey, egg, soaked breadcrumb, and half the salt.",
+      "Shape the mixture into 32 meatballs.",
+      "Heat the olive oil in a wide pot.",
+      "Saut\u00e9 the onion and garlic for 5 minutes.",
+      "Simmer with the tomato, water, oregano, and remaining salt for 5 minutes.",
+      "Lower the meatballs into the sauce.",
+      "Simmer covered for 25 minutes until the meatballs reach 74\u00b0C."
+    ]
+  },
+  {
+    "name": "Fish Sauce Cabbage Stir-Fry",
+    "cuisine": "Thai",
+    "serving": 2,
+    "prep_time": 10,
+    "cook_time": 10,
+    "total_time": 20,
+    "step_count": 5,
+    "diet_type": "non_veg",
+    "complexity": "easy",
+    "ingredients": [
+      {
+        "name": "cabbage",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "name": "garlic",
+        "quantity": 3,
+        "unit": "pcs"
+      },
+      {
+        "name": "fish sauce",
+        "quantity": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "sunflower oil",
+        "quantity": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "sugar",
+        "quantity": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "name": "water",
+        "quantity": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "steps": [
+      "Shred the cabbage.",
+      "Mince the garlic cloves.",
+      "Heat the sunflower oil in a wok.",
+      "Stir-fry the cabbage and garlic for 7 minutes.",
+      "Cook with the fish sauce, sugar, and water for 3 minutes."
+    ]
+  }
+]

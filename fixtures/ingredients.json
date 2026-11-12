@@ -1,0 +1,367 @@
+[
+  {
+    "name": "barley",
+    "diet": "veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "bay leaf",
+    "diet": "veg",
+    "unit_kind": "count"
+  },
+  {
+    "name": "beef",
+    "diet": "non_veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "beef broth",
+    "diet": "non_veg",
+    "unit_kind": "volume"
+  },
+  {
+    "name": "bell pepper",
+    "diet": "veg",
+    "unit_kind": "count"
+  },
+  {
+    "name": "bread",
+    "diet": "veg",
+    "unit_kind": "count"
+  },
+  {
+    "name": "breadcrumb",
+    "diet": "veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "broccoli",
+    "diet": "veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "butter",
+    "diet": "veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "cabbage",
+    "diet": "veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "carrot",
+    "diet": "veg",
+    "unit_kind": "count"
+  },
+  {
+    "name": "celery",
+    "diet": "veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "cheddar",
+    "diet": "veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "chicken",
+    "diet": "non_veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "chicken broth",
+    "diet": "non_veg",
+    "unit_kind": "volume"
+  },
+  {
+    "name": "chickpea",
+    "diet": "veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "chili powder",
+    "diet": "veg",
+    "unit_kind": "volume"
+  },
+  {
+    "name": "cinnamon",
+    "diet": "veg",
+    "unit_kind": "volume"
+  },
+  {
+    "name": "coconut milk",
+    "diet": "veg",
+    "unit_kind": "volume"
+  },
+  {
+    "name": "cod",
+    "diet": "non_veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "coriander",
+    "diet": "veg",
+    "unit_kind": "volume"
+  },
+  {
+    "name": "corn",
+    "diet": "veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "cucumber",
+    "diet": "veg",
+    "unit_kind": "count"
+  },
+  {
+    "name": "cumin",
+    "diet": "veg",
+    "unit_kind": "volume"
+  },
+  {
+    "name": "curry powder",
+    "diet": "veg",
+    "unit_kind": "volume"
+  },
+  {
+    "name": "egg",
+    "diet": "egg",
+    "unit_kind": "count"
+  },
+  {
+    "name": "eggplant",
+    "diet": "veg",
+    "unit_kind": "count"
+  },
+  {
+    "name": "fish sauce",
+    "diet": "non_veg",
+    "unit_kind": "volume"
+  },
+  {
+    "name": "flour",
+    "diet": "veg",
+    "unit_kind": "volume"
+  },
+  {
+    "name": "garlic",
+    "diet": "veg",
+    "unit_kind": "count"
+  },
+  {
+    "name": "ginger",
+    "diet": "veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "hummus",
+    "diet": "veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "kidney bean",
+    "diet": "veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "lemon",
+    "diet": "veg",
+    "unit_kind": "count"
+  },
+  {
+    "name": "lentil",
+    "diet": "veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "lettuce",
+    "diet": "veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "lime",
+    "diet": "veg",
+    "unit_kind": "count"
+  },
+  {
+    "name": "maple syrup",
+    "diet": "veg",
+    "unit_kind": "volume"
+  },
+  {
+    "name": "mayonnaise",
+    "diet": "egg",
+    "unit_kind": "volume"
+  },
+  {
+    "name": "milk",
+    "diet": "veg",
+    "unit_kind": "volume"
+  },
+  {
+    "name": "mushroom",
+    "diet": "veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "mustard",
+    "diet": "veg",
+    "unit_kind": "volume"
+  },
+  {
+    "name": "olive oil",
+    "diet": "veg",
+    "unit_kind": "volume"
+  },
+  {
+    "name": "onion",
+    "diet": "veg",
+    "unit_kind": "count"
+  },
+  {
+    "name": "orange",
+    "diet": "veg",
+    "unit_kind": "count"
+  },
+  {
+    "name": "oregano",
+    "diet": "veg",
+    "unit_kind": "volume"
+  },
+  {
+    "name": "paprika",
+    "diet": "veg",
+    "unit_kind": "volume"
+  },
+  {
+    "name": "parsley",
+    "diet": "veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "pea",
+    "diet": "veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "pork",
+    "diet": "non_veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "potato",
+    "diet": "veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "raisin",
+    "diet": "veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "rice",
+    "diet": "veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "rice noodle",
+    "diet": "veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "salmon",
+    "diet": "non_veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "salt",
+    "diet": "veg",
+    "unit_kind": "volume"
+  },
+  {
+    "name": "sesame oil",
+    "diet": "veg",
+    "unit_kind": "volume"
+  },
+  {
+    "name": "sesame seed",
+    "diet": "veg",
+    "unit_kind": "volume"
+  },
+  {
+    "name": "shrimp",
+    "diet": "non_veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "soy sauce",
+    "diet": "veg",
+    "unit_kind": "volume"
+  },
+  {
+    "name": "spinach",
+    "diet": "veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "sugar",
+    "diet": "veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "sunflower oil",
+    "diet": "veg",
+    "unit_kind": "volume"
+  },
+  {
+    "name": "thyme",
+    "diet": "veg",
+    "unit_kind": "volume"
+  },
+  {
+    "name": "tomato",
+    "diet": "veg",
+    "unit_kind": "count"
+  },
+  {
+    "name": "tomato paste",
+    "diet": "veg",
+    "unit_kind": "volume"
+  },
+  {
+    "name": "tortilla",
+    "diet": "veg",
+    "unit_kind": "count"
+  },
+  {
+    "name": "tuna",
+    "diet": "non_veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "turkey",
+    "diet": "non_veg",
+    "unit_kind": "weight"
+  },
+  {
+    "name": "turmeric",
+    "diet": "veg",
+    "unit_kind": "volume"
+  },
+  {
+    "name": "vanilla extract",
+    "diet": "veg",
+    "unit_kind": "volume"
+  },
+  {
+    "name": "vegetable broth",
+    "diet": "veg",
+    "unit_kind": "volume"
+  },
+  {
+    "name": "water",
+    "diet": "veg",
+    "unit_kind": "volume"
+  }
+]
