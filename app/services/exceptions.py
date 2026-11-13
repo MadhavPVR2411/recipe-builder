@@ -16,3 +16,6 @@ class AllergenNotFoundException(ServiceError):
 class RecipeNotFoundException(ServiceError):
  pass
 
+class PantryItemNotFoundException(ServiceError):
+ pass
+
