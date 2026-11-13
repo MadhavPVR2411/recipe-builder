@@ -23,3 +23,9 @@ class RecipeDetail(RecipeSummary):
   ingredients: List[RecipeIngredientResponse]
   steps: list[str]
 
+class MissingOneSuggestion(RecipeSummary):
+    missing_ingredient: str
+
+class SuggestionsResponse(BaseModel):
+    can_make: list[RecipeSummary]
+    missing_one: list[MissingOneSuggestion]

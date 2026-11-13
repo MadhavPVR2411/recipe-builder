@@ -19,3 +19,7 @@ class RecipeNotFoundException(ServiceError):
 class PantryItemNotFoundException(ServiceError):
  pass
 
+
+class IngredientNotFoundException(ServiceError):
+ pass
+

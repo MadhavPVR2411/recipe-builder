@@ -42,3 +42,16 @@ def find_by_id(recipe_id: int) -> dict | None:
             ],
             "steps": [step.instruction for step in recipe.steps],
         }
+
+def list_with_ingredients(diet_types: list[str]) -> list[dict]:
+    with get_session() as session:
+        recipes = session.scalars(
+            select(Recipe).where(Recipe.diet_type.in_(diet_types))
+        ).all()
+
+        result = []
+        for recipe in recipes:
+            data = _summary(recipe)
+            data["ingredients"] = {ri.ingredient_id: ri.ingredient.name for ri in recipe.ingredients}
+            result.append(data)
+        return result

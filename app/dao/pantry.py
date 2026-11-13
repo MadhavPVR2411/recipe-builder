@@ -79,3 +79,11 @@ def delete_item(user_id: int, item_id: int) -> bool:
             return False
         session.delete(item)
         return True
+
+def ingredient_ids(user_id: int) -> set[int]:
+    with get_session() as session:
+        rows = session.scalars(
+            select(PantryItem.ingredient_id)
+            .where(PantryItem.user_id == user_id, PantryItem.quantity > 0)
+        ).all()
+        return set(rows)
