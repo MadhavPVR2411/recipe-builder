@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Login from './auth/Login'
 import Signup from './auth/Signup'
+import Pantry from './pantry/Pantry'
 
 export default function App() {
   const [loggedIn, setLoggedIn] = useState(!!localStorage.getItem('token'))
@@ -26,6 +27,7 @@ export default function App() {
     <div>
       <h1>Recipe Book</h1>
       <button onClick={logout}>Log out</button>
+      <Pantry />
     </div>
   )
 }
