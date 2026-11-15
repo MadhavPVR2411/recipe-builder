@@ -3,6 +3,7 @@ import Login from './auth/Login'
 import Signup from './auth/Signup'
 import Pantry from './pantry/Pantry'
 import Suggestions from './suggestions/Suggestions'
+import Recipes from "./recipes/Recipes.jsx";
 
 export default function App() {
   const [loggedIn, setLoggedIn] = useState(!!localStorage.getItem('token'))
@@ -31,6 +32,7 @@ export default function App() {
       <button onClick={logout}>Log out</button>
       <Pantry onChange={() => setVersion(v => v + 1)} />
       <Suggestions version={version} />
+      <Recipes/>
     </div>
   )
 }
