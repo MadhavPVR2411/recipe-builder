@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { api } from '../api'
 
-export default function Pantry() {
+export default function Pantry({ onChange }) {
   const [items, setItems] = useState([])
   const [ingredient, setIngredient] = useState('')
   const [quantity, setQuantity] = useState('')
@@ -10,6 +10,7 @@ export default function Pantry() {
 
   async function load() {
     setItems(await api('/pantry'))
+    onChange()
   }
 
   useEffect(() => { api('/pantry').then(setItems) }, [])

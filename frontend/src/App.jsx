@@ -2,10 +2,12 @@ import { useState } from 'react'
 import Login from './auth/Login'
 import Signup from './auth/Signup'
 import Pantry from './pantry/Pantry'
+import Suggestions from './suggestions/Suggestions'
 
 export default function App() {
   const [loggedIn, setLoggedIn] = useState(!!localStorage.getItem('token'))
   const [showSignup, setShowSignup] = useState(false)
+  const [version, setVersion] = useState(0)
 
   function logout() {
     localStorage.removeItem('token')
@@ -27,7 +29,8 @@ export default function App() {
     <div>
       <h1>Recipe Book</h1>
       <button onClick={logout}>Log out</button>
-      <Pantry />
+      <Pantry onChange={() => setVersion(v => v + 1)} />
+      <Suggestions version={version} />
     </div>
   )
 }
