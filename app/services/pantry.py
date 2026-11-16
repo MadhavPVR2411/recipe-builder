@@ -1,8 +1,13 @@
 from app.dao import ingredient as ingredient_dao
 from app.dao import pantry as pantry_dao
-from app.dto.pantry import PantryItemCreate, PantryItemUpdate, PantryItemResponse
+from app.dto.pantry import PantryItemCreate, PantryItemUpdate, PantryItemResponse, IngredientOption
 from app.services.exceptions import IngredientNotFoundException, PantryItemNotFoundException
 
+UNITS = {
+    "weight": ["g","kg"],
+    "volume": ["ml","litre"],
+    "count":  ["pcs"],
+}
 
 def add_item(user_id: int, data: PantryItemCreate) -> PantryItemResponse:
     ingredient = ingredient_dao.find_by_name(data.ingredient)
@@ -32,3 +37,10 @@ def update_item(user_id: int, item_id: int, data: PantryItemUpdate) -> PantryIte
 def delete_item(user_id: int, item_id: int) -> None:
     if not pantry_dao.delete_item(user_id, item_id):
         raise PantryItemNotFoundException(item_id)
+
+def list_ingredient_options() -> list[IngredientOption]:
+    return [
+        IngredientOption(id=i["id"], name=i["name"], units=UNITS[i["unit_kind"]])
+        for i in ingredient_dao.list_all()
+    ]
+

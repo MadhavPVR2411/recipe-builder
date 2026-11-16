@@ -24,3 +24,7 @@ class PantryItemResponse(BaseModel):
     expiry_date: date | None = None
     added_at: datetime
 
+class IngredientOption(BaseModel):
+    id: int
+    name: str
+    units: list[str]

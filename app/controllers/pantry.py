@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 
 from app.controllers.deps import get_current_user
-from app.dto.pantry import PantryItemCreate, PantryItemUpdate, PantryItemResponse
+from app.dto.pantry import PantryItemCreate, PantryItemUpdate, PantryItemResponse, IngredientOption
 from app.services import pantry as service
 from app.services.exceptions import IngredientNotFoundException, PantryItemNotFoundException
 
@@ -35,3 +35,7 @@ def delete_item(item_id: int, user: dict = Depends(get_current_user)) -> None:
         service.delete_item(user["id"], item_id)
     except PantryItemNotFoundException:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Pantry item not found")
+
+@router.get("/ingredients", response_model=list[IngredientOption])
+def list_ingredients(user: dict = Depends(get_current_user)) -> list[IngredientOption]:
+    return service.list_ingredient_options()
