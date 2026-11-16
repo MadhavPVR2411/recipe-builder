@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { api } from '../api'
 
-// Fade-in on scroll, reused from Barterly's profile page
+// from Barterly
 function useReveal(threshold = 0.12) {
   const ref = useRef(null)
   const [visible, setVisible] = useState(false)
@@ -134,7 +134,7 @@ export default function Profile({ onLogout }) {
                   </div>
                   {addable.length > 0 && (
                     <select value="" onChange={e => addAllergen(e.target.value)}>
-                      <option value="">Add an allergy…</option>
+                      <option value="">Add an allergy</option>
                       {addable.map(a => <option key={a.id} value={a.id}>{a.name}</option>)}
                     </select>
                   )}

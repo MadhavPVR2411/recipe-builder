@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Colour theme carried over from Barterly */
+/* theme from Barterly */
 @theme {
   --color-background: hsl(45 18% 95%);
   --color-foreground: hsl(205 24% 22%);

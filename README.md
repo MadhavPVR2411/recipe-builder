@@ -1,21 +1,19 @@
 # Recipe Builder
 
-A REST API that suggests recipes based on the ingredients a user has at home, filtered by their diet.
-Built with FastAPI and PostgreSQL as part of the Tektalis FDE training.
-
-There is no UI yet. The API can be used through Swagger (`/docs`) or the Postman collection in `postman/`.
+An app that suggests recipes based on the ingredients a user has at home, filtered by their diet.
+FastAPI and PostgreSQL on the backend, React on the frontend. Built as part of the Tektalis FDE training.
 
 ## Tech stack
 
-- FastAPI for the API
-- PostgreSQL as the database
-- SQLAlchemy (ORM) for data access and Alembic for migrations
+- FastAPI for the API, Pydantic for request and response validation
+- PostgreSQL, with SQLAlchemy (ORM) and Alembic for migrations
 - bcrypt for password hashing, JWT for login tokens
-- Pydantic for request and response validation
+- React + Vite for the frontend, styled with Tailwind
+- Docker Compose to run the API and database together
 
 ## Project structure
 
-The app follows MVC, with the model side split into a service layer and a DAO layer.
+The backend follows MVC, with the model side split into a service layer and a DAO layer.
 
 ```
 app/
@@ -28,6 +26,7 @@ app/
   core/            config, read from .env
 alembic/           database migrations
 fixtures/          recipe and ingredient data, plus the seed script
+frontend/          React app (one folder per screen in src/)
 postman/           Postman collection
 tests/             unit tests
 docs/              requirements and notes
@@ -35,6 +34,9 @@ docs/              requirements and notes
 
 A request goes controller -> service -> DAO -> database, and each layer only talks to the one below it.
 Controllers deal with HTTP, services deal with the rules, and only the DAO layer touches the database.
+
+The frontend is split the same way by feature: `auth/`, `pantry/`, `suggestions/`, `recipes/` and
+`profile/`, with all API calls going through `src/api.js`.
 
 ## Database
 
@@ -54,9 +56,38 @@ The seed data has 73 ingredients and 30 recipes. A recipe's diet comes from its 
 steps and total time: easy is 5 steps or fewer and 30 minutes or less, hard is 9 or more steps or over
 60 minutes, and everything else is medium.
 
-## Running it locally
+## Suggestions
 
-You need Python 3.12+ and PostgreSQL.
+`GET /suggestions` compares the user's pantry with every recipe their diet allows and returns two lists:
+
+- `can_make` - every ingredient is in the pantry
+- `missing_one` - exactly one ingredient is missing, along with its name
+
+Veg users only see veg recipes, egg users see veg and egg, and non-veg users see everything.
+Pantry items with a quantity of 0 don't count.
+
+## Running with Docker
+
+You need Docker Desktop running.
+
+```
+cp .env.example .env
+```
+
+Fill in `.env` (see below for `JWT_SECRET_KEY`), then:
+
+```
+docker compose up --build
+```
+
+This starts Postgres, runs the migrations, loads the seed data and starts the API.
+Swagger is at http://localhost:8001/docs.
+
+`docker compose down` stops everything and keeps the data. `docker compose down -v` also deletes the database.
+
+## Running locally
+
+You need Python 3.12+, PostgreSQL and Node 20+.
 
 1. Create the database and a user for it:
    ```
@@ -82,6 +113,13 @@ You need Python 3.12+ and PostgreSQL.
    uvicorn app.main:app --reload
    ```
    Swagger is at http://127.0.0.1:8000/docs.
+5. In a second terminal, start the frontend:
+   ```
+   cd frontend
+   npm install
+   npm run dev
+   ```
+   Open http://localhost:5173. Vite forwards the API calls to port 8000.
 
 ## Endpoints
 
@@ -97,9 +135,14 @@ You need Python 3.12+ and PostgreSQL.
 | DELETE | /profile/allergens/{id} | yes | Remove an allergen |
 | GET | /recipes | no | List recipes, optional `diet_type` and `cuisine` filters |
 | GET | /recipes/{id} | no | One recipe with ingredients and steps |
+| GET | /pantry | yes | Your pantry items |
+| POST | /pantry | yes | Add an item (ingredient name, quantity, unit, optional expiry date) |
+| PATCH | /pantry/{id} | yes | Update quantity, unit or expiry date |
+| DELETE | /pantry/{id} | yes | Remove an item |
+| GET | /suggestions | yes | Recipes you can make, and ones missing a single ingredient |
 
 For routes that need a login, log in first and send the token as `Authorization: Bearer <token>`.
-In Swagger, use the Authorize button.
+In Swagger, use the Authorize button. Tokens expire after `JWT_EXPIRE_MINUTES` (60 by default).
 
 ## Testing
 
@@ -110,8 +153,13 @@ Unit tests for the diet logic can be run with:
 pytest
 ```
 
+The frontend can be linted with `npm run lint` inside `frontend/`.
+
 ## Status
 
-Done: auth, profile, recipes, migrations and seed data.
+Done: auth, profile, recipes, pantry, suggestions, migrations and seed data, Docker for the API and
+database, and a React frontend for all of the above.
 
-Next: pantry, recipe suggestions from the pantry, and Docker.
+Next: serving the React build from Docker, an ingredient dropdown in the pantry with units tied to each
+ingredient, and allergen filtering in suggestions. Later: cooking a recipe (taking the quantities out of
+the pantry) and expiry alerts.

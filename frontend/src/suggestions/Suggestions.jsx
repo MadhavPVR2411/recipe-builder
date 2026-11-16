@@ -14,7 +14,7 @@ export default function Suggestions({ version }) {
       {data.can_make.length === 0 ? <p>Nothing yet. Add more to your pantry.</p> : (
         <ul>
           {data.can_make.map(r => (
-            <li key={r.id}>{r.name} · {r.cuisine} · {r.total_time} min · {r.complexity}</li>
+            <li key={r.id}>{r.name} ({r.cuisine}, {r.total_time} min, {r.complexity})</li>
           ))}
         </ul>
       )}

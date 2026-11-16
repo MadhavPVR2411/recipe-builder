@@ -26,11 +26,11 @@ def create_user(username: str, password_hash: str) -> dict:
     with get_session() as session:
         user = User(username=username, password_hash=password_hash)
         session.add(user)
-        session.flush()                        # sends the INSERT now, so user.id gets filled in
+        session.flush()  # need user.id for the profile
         profile = UserProfile(user_id=user.id)
         session.add(profile)
         session.flush()
-        session.refresh(profile)               # reload to pick up the database default diet_type
+        session.refresh(profile)
         return {"id": user.id, "username": user.username, "diet_type": profile.diet_type}
 
 

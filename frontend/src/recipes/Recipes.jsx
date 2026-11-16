@@ -19,10 +19,10 @@ export default function Recipes() {
   if (selectedId && detail?.id === selectedId) {
     return (
       <section>
-        <button onClick={() => setSelectedId(null)}>← Back to recipes</button>
+        <button onClick={() => setSelectedId(null)}>Back to recipes</button>
         <h2>{detail.name}</h2>
-        <p>{detail.cuisine} · {detail.diet_type} · {detail.complexity} · serves {detail.serving}</p>
-        <p>Prep {detail.prep_time} min · Cook {detail.cook_time} min</p>
+        <p>{detail.cuisine} | {detail.diet_type} | {detail.complexity} | serves {detail.serving}</p>
+        <p>Prep {detail.prep_time} min | Cook {detail.cook_time} min</p>
 
         <h3>Ingredients</h3>
         <ul>
@@ -53,7 +53,7 @@ export default function Recipes() {
         {recipes.map(r => (
           <li key={r.id}>
             <button onClick={() => setSelectedId(r.id)}>{r.name}</button>
-            {' '}· {r.cuisine} · {r.total_time} min · {r.complexity}
+            {' '}{r.cuisine} | {r.total_time} min | {r.complexity}
           </li>
         ))}
       </ul>

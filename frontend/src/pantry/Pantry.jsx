@@ -52,7 +52,7 @@ export default function Pantry({ onChange }) {
         <ul>
           {items.map(item => (
             <li key={item.id}>
-              {item.ingredient_name} — {item.quantity} {item.unit}
+              {item.ingredient_name}: {item.quantity} {item.unit}
               <button onClick={() => deleteItem(item.id)}>Delete</button>
             </li>
           ))}
