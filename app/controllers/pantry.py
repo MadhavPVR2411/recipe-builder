@@ -3,7 +3,7 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from app.controllers.deps import get_current_user
 from app.dto.pantry import PantryItemCreate, PantryItemUpdate, PantryItemResponse, IngredientOption
 from app.services import pantry as service
-from app.services.exceptions import IngredientNotFoundException, PantryItemNotFoundException
+from app.services.exceptions import IngredientNotFoundException, PantryItemNotFoundException, InvalidUnitException
 
 router = APIRouter(prefix="/pantry", tags=["pantry"])
 
@@ -14,7 +14,8 @@ def add_item(body: PantryItemCreate, user: dict = Depends(get_current_user)) -> 
         return service.add_item(user["id"], body)
     except IngredientNotFoundException:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Ingredient not found")
-
+    except InvalidUnitException as e:
+        raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=str(e))
 
 @router.get("", response_model=list[PantryItemResponse])
 def list_items(user: dict = Depends(get_current_user)) -> list[PantryItemResponse]:

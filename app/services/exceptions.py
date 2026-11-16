@@ -23,3 +23,9 @@ class PantryItemNotFoundException(ServiceError):
 class IngredientNotFoundException(ServiceError):
  pass
 
+
+class InvalidUnitException(ServiceError):
+ def __init__(self, unit: str, allowed: list[str]):
+  self.allowed = allowed
+  super().__init__(f"Unit '{unit}' not allowed, use one of: {', '.join(allowed)}")
+

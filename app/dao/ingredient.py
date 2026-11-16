@@ -8,7 +8,7 @@ def find_by_name(name: str) -> dict | None:
         ingredient = session.scalar(select(Ingredient).where(Ingredient.name == name.strip().lower()))
         if ingredient is None:
             return None
-        return {"id": ingredient.id, "name": ingredient.name}
+        return {"id": ingredient.id, "name": ingredient.name, "unit_kind": ingredient.unit_kind}
 
 
 def list_all() -> list[dict]:
