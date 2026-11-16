@@ -13,3 +13,4 @@ venv/
 .DS_Store
 .claude/
 .junie/
+.mcp.json
