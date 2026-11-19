@@ -1,5 +1,3 @@
-from typing import List
-
 from pydantic import BaseModel
 
 
@@ -20,7 +18,7 @@ class RecipeDetail(RecipeSummary):
   serving: int
   prep_time: int
   cook_time: int
-  ingredients: List[RecipeIngredientResponse]
+  ingredients: list[RecipeIngredientResponse]
   steps: list[str]
 
 class MissingOneSuggestion(RecipeSummary):

@@ -1,5 +1,3 @@
-from datetime import datetime
-
 from pydantic import BaseModel, Field, field_validator
 
 
@@ -13,6 +11,13 @@ class Credentials(BaseModel):
         v = v.strip().lower()
         if len(v) < 3:
             raise ValueError("username must be at least 3 characters")
+        return v
+
+    @field_validator("password")
+    @classmethod
+    def fits_bcrypt(cls, v: str) -> str:
+        if len(v.encode("utf-8")) > 72:
+            raise ValueError("password is too long")
         return v
 
 

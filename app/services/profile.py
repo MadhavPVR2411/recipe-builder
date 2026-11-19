@@ -24,5 +24,5 @@ def add_allergen(user_id: int, allergen_id: int) -> ProfileResponse:
 
 def remove_allergen(user_id: int, allergen_id: int) -> ProfileResponse:
     if allergen_dao.find_by_id(allergen_id) is None:
-        raise AllergenNotFoundException
+        raise AllergenNotFoundException(allergen_id)
     return ProfileResponse(**profile_dao.remove_allergen(user_id, allergen_id))

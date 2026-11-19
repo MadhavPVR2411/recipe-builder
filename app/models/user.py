@@ -1,6 +1,6 @@
 from datetime import datetime
 from sqlalchemy.orm import Mapped, mapped_column,relationship
-from sqlalchemy import Text, DateTime, ForeignKey, CheckConstraint, Table, Column, func
+from sqlalchemy import Text, DateTime, ForeignKey, CheckConstraint, Table, Column
 from app.models.base import Base
 
 user_allergen = Table(

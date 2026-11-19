@@ -34,7 +34,7 @@ def add_item(user_id: int, data: PantryItemCreate) -> PantryItemResponse:
         item = pantry_dao.update_item(
             user_id,
             existing["id"],
-            quantity=round(existing["quantity"] + added, 3),
+            quantity=round(existing["quantity"] + added, 2),
             expiry_date=_earliest(existing["expiry_date"], data.expiry_date),
         )
         return PantryItemResponse(**item)

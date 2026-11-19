@@ -22,6 +22,11 @@ def list_items(user: dict = Depends(get_current_user)) -> list[PantryItemRespons
     return service.list_items(user["id"])
 
 
+@router.get("/ingredients", response_model=list[IngredientOption])
+def list_ingredients(user: dict = Depends(get_current_user)) -> list[IngredientOption]:
+    return service.list_ingredient_options()
+
+
 @router.patch("/{item_id}", response_model=PantryItemResponse)
 def update_item(item_id: int, body: PantryItemUpdate, user: dict = Depends(get_current_user)) -> PantryItemResponse:
     try:
@@ -36,7 +41,3 @@ def delete_item(item_id: int, user: dict = Depends(get_current_user)) -> None:
         service.delete_item(user["id"], item_id)
     except PantryItemNotFoundException:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Pantry item not found")
-
-@router.get("/ingredients", response_model=list[IngredientOption])
-def list_ingredients(user: dict = Depends(get_current_user)) -> list[IngredientOption]:
-    return service.list_ingredient_options()

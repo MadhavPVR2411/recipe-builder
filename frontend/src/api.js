@@ -17,7 +17,21 @@ export async function api(path, { method = 'GET', body } = {}) {
   }
 
   if (res.status === 204) return null
-  const data = await res.json()
-  if (!res.ok) throw new Error(data.detail ?? 'Request failed')
+
+  const text = await res.text()
+  let data = null
+  try {
+    data = text ? JSON.parse(text) : null
+  } catch {
+    // not JSON, e.g. a plain-text 500
+  }
+
+  if (!res.ok) {
+    const detail = data?.detail
+    const message = Array.isArray(detail)
+      ? detail.map(d => d.msg).join(', ')
+      : detail ?? (text || 'Request failed')
+    throw new Error(message)
+  }
   return data
 }

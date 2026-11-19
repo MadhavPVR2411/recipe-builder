@@ -61,7 +61,7 @@ export default function App() {
       </header>
 
       <main className="bg-card border rounded-2xl shadow-sm p-6">
-        {tab === 'pantry' && <Pantry onChange={() => {}} />}
+        {tab === 'pantry' && <Pantry />}
         {tab === 'cook' && <Suggestions />}
         {tab === 'recipes' && <Recipes />}
         {tab === 'profile' && <Profile onLogout={logout} />}

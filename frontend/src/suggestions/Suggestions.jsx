@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import { api } from '../api'
 
-export default function Suggestions({ version }) {
+export default function Suggestions() {
   const [data, setData] = useState({ can_make: [], missing_one: [] })
 
-  useEffect(() => { api('/suggestions').then(setData) }, [version])
+  useEffect(() => { api('/suggestions').then(setData) }, [])
 
   return (
     <section>

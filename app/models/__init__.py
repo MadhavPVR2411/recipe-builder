@@ -4,3 +4,17 @@ from app.models.allergen import Allergen
 from app.models.recipe import Ingredient, Recipe, RecipeIngredient, RecipeStep
 from app.models.pantry import PantryItem
 from app.models.cook_log import CookLog
+
+__all__ = [
+    "Base",
+    "User",
+    "UserProfile",
+    "user_allergen",
+    "Allergen",
+    "Ingredient",
+    "Recipe",
+    "RecipeIngredient",
+    "RecipeStep",
+    "PantryItem",
+    "CookLog",
+]
