@@ -1,6 +1,6 @@
 from decimal import Decimal
 
-from sqlalchemy import Text, Integer, Numeric, ForeignKey, CheckConstraint
+from sqlalchemy import CheckConstraint, ForeignKey, Integer, Numeric, Text
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.models.base import Base
@@ -9,14 +9,16 @@ from app.models.base import Base
 class Ingredient(Base):
     __tablename__ = "ingredient"
 
-    id: Mapped[int] = mapped_column(primary_key = True)
+    id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str] = mapped_column(Text, unique=True)
     diet: Mapped[str] = mapped_column(Text)
     unit_kind: Mapped[str] = mapped_column(Text)
 
     __table_args__ = (
         CheckConstraint("diet IN ('veg', 'egg', 'non_veg')", name="ck_ingredient_diet"),
-        CheckConstraint("unit_kind IN ('count', 'weight', 'volume')", name="ck_ingredient_unit_kind"),
+        CheckConstraint(
+            "unit_kind IN ('count', 'weight', 'volume')", name="ck_ingredient_unit_kind"
+        ),
     )
 
 
@@ -38,7 +40,9 @@ class Recipe(Base):
         back_populates="recipe", cascade="all, delete-orphan"
     )
     steps: Mapped[list["RecipeStep"]] = relationship(
-        back_populates="recipe", cascade="all, delete-orphan", order_by="RecipeStep.step_number"
+        back_populates="recipe",
+        cascade="all, delete-orphan",
+        order_by="RecipeStep.step_number",
     )
 
     __table_args__ = (
@@ -47,8 +51,12 @@ class Recipe(Base):
         CheckConstraint("cook_time >= 0", name="ck_recipe_cook_time"),
         CheckConstraint("total_time > 0", name="ck_recipe_total_time"),
         CheckConstraint("step_count > 0", name="ck_recipe_step_count"),
-        CheckConstraint("diet_type IN ('veg', 'egg', 'non_veg')", name="ck_recipe_diet_type"),
-        CheckConstraint("complexity IN ('easy', 'medium', 'hard')", name="ck_recipe_complexity"),
+        CheckConstraint(
+            "diet_type IN ('veg', 'egg', 'non_veg')", name="ck_recipe_diet_type"
+        ),
+        CheckConstraint(
+            "complexity IN ('easy', 'medium', 'hard')", name="ck_recipe_complexity"
+        ),
     )
 
 
@@ -67,7 +75,9 @@ class RecipeIngredient(Base):
     recipe: Mapped["Recipe"] = relationship(back_populates="ingredients")
     ingredient: Mapped["Ingredient"] = relationship()
 
-    __table_args__ = (CheckConstraint("quantity > 0", name="ck_recipe_ingredient_quantity"),)
+    __table_args__ = (
+        CheckConstraint("quantity > 0", name="ck_recipe_ingredient_quantity"),
+    )
 
 
 class RecipeStep(Base):
@@ -76,7 +86,7 @@ class RecipeStep(Base):
     recipe_id: Mapped[int] = mapped_column(
         ForeignKey("recipe.id", ondelete="CASCADE"), primary_key=True
     )
-    step_number: Mapped[int] = mapped_column(Integer, primary_key = True)
+    step_number: Mapped[int] = mapped_column(Integer, primary_key=True)
     instruction: Mapped[str] = mapped_column(Text)
 
     recipe: Mapped["Recipe"] = relationship(back_populates="steps")

@@ -1,31 +1,32 @@
 class ServiceError(Exception):
- pass
+    pass
 
 
 class UsernameAlreadyExistsException(ServiceError):
- pass
+    pass
 
 
 class InvalidCredentialsException(ServiceError):
- pass
+    pass
 
 
 class AllergenNotFoundException(ServiceError):
- pass
+    pass
+
 
 class RecipeNotFoundException(ServiceError):
- pass
+    pass
+
 
 class PantryItemNotFoundException(ServiceError):
- pass
+    pass
 
 
 class IngredientNotFoundException(ServiceError):
- pass
+    pass
 
 
 class InvalidUnitException(ServiceError):
- def __init__(self, unit: str, allowed: list[str]):
-  self.allowed = allowed
-  super().__init__(f"Unit '{unit}' not allowed, use one of: {', '.join(allowed)}")
-
+    def __init__(self, unit: str, allowed: list[str]):
+        self.allowed = allowed
+        super().__init__(f"Unit '{unit}' not allowed, use one of: {', '.join(allowed)}")

@@ -1,6 +1,6 @@
 from app.dao import allergen as allergen_dao
 from app.dao import profile as profile_dao
-from app.dto.profile import ProfileResponse, AllergenResponse
+from app.dto.profile import AllergenResponse, ProfileResponse
 from app.services.exceptions import AllergenNotFoundException
 
 

@@ -1,9 +1,11 @@
 from app.dao import recipe as recipe_dao
-from app.dto.recipe import RecipeSummary, RecipeDetail
+from app.dto.recipe import RecipeDetail, RecipeSummary
 from app.services.exceptions import RecipeNotFoundException
 
 
-def list_recipes(diet_type: str | None = None, cuisine: str | None = None) -> list[RecipeSummary]:
+def list_recipes(
+    diet_type: str | None = None, cuisine: str | None = None
+) -> list[RecipeSummary]:
     return [RecipeSummary(**r) for r in recipe_dao.list_recipes(diet_type, cuisine)]
 
 

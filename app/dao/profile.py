@@ -1,5 +1,5 @@
 from app.dao.db import get_session
-from app.models import User, UserProfile, Allergen
+from app.models import Allergen, User, UserProfile
 
 
 def _to_dict(user: User, profile: UserProfile) -> dict:

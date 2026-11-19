@@ -1,17 +1,26 @@
 from fastapi import APIRouter, Depends, HTTPException, status
-from app.services import auth as service
-from app.dto.auth import LoginRequest, TokenResponse,SignupRequest,UserResponse
-from app.services.exceptions import InvalidCredentialsException, UsernameAlreadyExistsException
+
 from app.controllers.deps import get_current_user
+from app.dto.auth import LoginRequest, SignupRequest, TokenResponse, UserResponse
+from app.services import auth as service
+from app.services.exceptions import (
+    InvalidCredentialsException,
+    UsernameAlreadyExistsException,
+)
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 
-@router.post("/signup", response_model=UserResponse, status_code=status.HTTP_201_CREATED)
-def signup(body:SignupRequest) -> UserResponse:
+
+@router.post(
+    "/signup", response_model=UserResponse, status_code=status.HTTP_201_CREATED
+)
+def signup(body: SignupRequest) -> UserResponse:
     try:
         return service.signup(body.username, body.password)
     except UsernameAlreadyExistsException:
-        raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail="Username already taken")
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT, detail="Username already taken"
+        )
 
 
 @router.post("/login", response_model=TokenResponse)
@@ -19,7 +28,11 @@ def login(body: LoginRequest) -> TokenResponse:
     try:
         return service.login(body.username, body.password)
     except InvalidCredentialsException:
-        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid username or password")
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid username or password",
+        )
+
 
 @router.get("/me")
 def me(user: dict = Depends(get_current_user)) -> dict:

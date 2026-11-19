@@ -1,13 +1,21 @@
 from app.dao import ingredient as ingredient_dao
 from app.dao import pantry as pantry_dao
-from app.dto.pantry import PantryItemCreate, PantryItemUpdate, PantryItemResponse, IngredientOption
-from app.services.exceptions import IngredientNotFoundException, PantryItemNotFoundException
-from app.services.exceptions import InvalidUnitException
+from app.dto.pantry import (
+    IngredientOption,
+    PantryItemCreate,
+    PantryItemResponse,
+    PantryItemUpdate,
+)
+from app.services.exceptions import (
+    IngredientNotFoundException,
+    InvalidUnitException,
+    PantryItemNotFoundException,
+)
 
 UNITS = {
-    "weight": ["g","kg"],
-    "volume": ["ml","litre"],
-    "count":  ["pcs"],
+    "weight": ["g", "kg"],
+    "volume": ["ml", "litre"],
+    "count": ["pcs"],
 }
 
 # how many base units (g, ml, pcs) one of each unit is worth
@@ -53,8 +61,12 @@ def list_items(user_id: int) -> list[PantryItemResponse]:
     return [PantryItemResponse(**i) for i in pantry_dao.list_items(user_id)]
 
 
-def update_item(user_id: int, item_id: int, data: PantryItemUpdate) -> PantryItemResponse:
-    item = pantry_dao.update_item(user_id, item_id, data.quantity, data.unit, data.expiry_date)
+def update_item(
+    user_id: int, item_id: int, data: PantryItemUpdate
+) -> PantryItemResponse:
+    item = pantry_dao.update_item(
+        user_id, item_id, data.quantity, data.unit, data.expiry_date
+    )
     if item is None:
         raise PantryItemNotFoundException(item_id)
     return PantryItemResponse(**item)
@@ -64,9 +76,9 @@ def delete_item(user_id: int, item_id: int) -> None:
     if not pantry_dao.delete_item(user_id, item_id):
         raise PantryItemNotFoundException(item_id)
 
+
 def list_ingredient_options() -> list[IngredientOption]:
     return [
         IngredientOption(id=i["id"], name=i["name"], units=UNITS[i["unit_kind"]])
         for i in ingredient_dao.list_all()
     ]
-

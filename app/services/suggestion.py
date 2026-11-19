@@ -1,7 +1,7 @@
 from app.dao import pantry as pantry_dao
 from app.dao import profile as profile_dao
 from app.dao import recipe as recipe_dao
-from app.dto.recipe import RecipeSummary, MissingOneSuggestion, SuggestionsResponse
+from app.dto.recipe import MissingOneSuggestion, RecipeSummary, SuggestionsResponse
 from app.services.diet import allowed_diets
 
 
@@ -24,7 +24,9 @@ def get_suggestions(user_id: int) -> SuggestionsResponse:
         elif len(missing) == 1:
             missing_id = next(iter(missing))
             missing_one.append(
-                MissingOneSuggestion(**recipe, missing_ingredient=ingredients[missing_id])
+                MissingOneSuggestion(
+                    **recipe, missing_ingredient=ingredients[missing_id]
+                )
             )
 
     return SuggestionsResponse(can_make=can_make, missing_one=missing_one)

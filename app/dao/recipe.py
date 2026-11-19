@@ -15,7 +15,9 @@ def _summary(recipe: Recipe) -> dict:
     }
 
 
-def list_recipes(diet_type: str | None = None, cuisine: str | None = None) -> list[dict]:
+def list_recipes(
+    diet_type: str | None = None, cuisine: str | None = None
+) -> list[dict]:
     with get_session() as session:
         query = select(Recipe).order_by(Recipe.name)
         if diet_type is not None:
@@ -23,7 +25,6 @@ def list_recipes(diet_type: str | None = None, cuisine: str | None = None) -> li
         if cuisine is not None:
             query = query.where(Recipe.cuisine == cuisine)
         return [_summary(r) for r in session.scalars(query).all()]
-    
 
 
 def find_by_id(recipe_id: int) -> dict | None:
@@ -37,11 +38,16 @@ def find_by_id(recipe_id: int) -> dict | None:
             "prep_time": recipe.prep_time,
             "cook_time": recipe.cook_time,
             "ingredients": [
-                {"name": ri.ingredient.name, "quantity": float(ri.quantity), "unit": ri.unit}
+                {
+                    "name": ri.ingredient.name,
+                    "quantity": float(ri.quantity),
+                    "unit": ri.unit,
+                }
                 for ri in recipe.ingredients
             ],
             "steps": [step.instruction for step in recipe.steps],
         }
+
 
 def list_with_ingredients(diet_types: list[str]) -> list[dict]:
     with get_session() as session:
@@ -52,6 +58,8 @@ def list_with_ingredients(diet_types: list[str]) -> list[dict]:
         result = []
         for recipe in recipes:
             data = _summary(recipe)
-            data["ingredients"] = {ri.ingredient_id: ri.ingredient.name for ri in recipe.ingredients}
+            data["ingredients"] = {
+                ri.ingredient_id: ri.ingredient.name for ri in recipe.ingredients
+            }
             result.append(data)
         return result

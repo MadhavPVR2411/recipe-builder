@@ -5,26 +5,82 @@ RANK = {VEG: 0, EGG: 1, NON_VEG: 2}
 
 _NON_VEG_TERMS = [
     # meat & poultry
-    "chicken", "beef", "pork", "mutton", "lamb", "goat", "veal", "venison",
-    "turkey", "duck", "goose", "bacon", "ham", "salami", "pepperoni",
-    "prosciutto", "pancetta", "sausages?", "chorizo", "hot ?dogs?",
-    "meat", "meatballs?", "steaks?", "ground beef", "keema",
+    "chicken",
+    "beef",
+    "pork",
+    "mutton",
+    "lamb",
+    "goat",
+    "veal",
+    "venison",
+    "turkey",
+    "duck",
+    "goose",
+    "bacon",
+    "ham",
+    "salami",
+    "pepperoni",
+    "prosciutto",
+    "pancetta",
+    "sausages?",
+    "chorizo",
+    "hot ?dogs?",
+    "meat",
+    "meatballs?",
+    "steaks?",
+    "ground beef",
+    "keema",
     # seafood
-    "fish", "salmon", "tuna", "cod", "tilapia", "trout", "halibut", "mackerel",
-    "anchov(?:y|ies)", "sardines?", "shrimps?", "prawns?", "crabs?",
-    "lobsters?", "clams?", "mussels?", "oysters?", "scallops?", "squid",
-    "calamari", "octopus", "caviar", "roe",
+    "fish",
+    "salmon",
+    "tuna",
+    "cod",
+    "tilapia",
+    "trout",
+    "halibut",
+    "mackerel",
+    "anchov(?:y|ies)",
+    "sardines?",
+    "shrimps?",
+    "prawns?",
+    "crabs?",
+    "lobsters?",
+    "clams?",
+    "mussels?",
+    "oysters?",
+    "scallops?",
+    "squid",
+    "calamari",
+    "octopus",
+    "caviar",
+    "roe",
     # hidden animal products
-    "gelatin(?:e)?", "lard", "suet", "tallow", "fish sauce", "oyster sauce",
-    "worcestershire(?: sauce)?", "bone broth",
+    "gelatin(?:e)?",
+    "lard",
+    "suet",
+    "tallow",
+    "fish sauce",
+    "oyster sauce",
+    "worcestershire(?: sauce)?",
+    "bone broth",
 ]
 _EGG_TERMS = ["eggs?", "egg (?:whites?|yolks?)", "mayonnaise", "mayo", "meringue"]
 
 # Checked first: phrases that contain a keyword but are vegetarian.
 _EXCLUDE_TERMS = [
-    "eggplants?", "egg-?free", "eggless", "crab ?apples?", "duck sauce",
-    "vegetable (?:broth|stock)", "vegan", "veggie", "vegetarian",
-    "imitation", "meatless", "plant[- ]based", "egg replacer",
+    "eggplants?",
+    "egg-?free",
+    "eggless",
+    "crab ?apples?",
+    "duck sauce",
+    "vegetable (?:broth|stock)",
+    "vegan",
+    "veggie",
+    "vegetarian",
+    "imitation",
+    "meatless",
+    "plant[- ]based",
+    "egg replacer",
 ]
 
 
@@ -37,8 +93,20 @@ _EGG_RE = _compile(_EGG_TERMS)
 _EXCLUDE_RE = _compile(_EXCLUDE_TERMS)
 
 # Food.com tags that mark a recipe as containing meat/seafood.
-MEAT_TAGS = {"meat", "poultry", "seafood", "pork", "beef", "chicken",
-             "lamb-sheep", "fish", "shellfish", "turkey", "duck", "veal"}
+MEAT_TAGS = {
+    "meat",
+    "poultry",
+    "seafood",
+    "pork",
+    "beef",
+    "chicken",
+    "lamb-sheep",
+    "fish",
+    "shellfish",
+    "turkey",
+    "duck",
+    "veal",
+}
 
 
 def ingredient_diet(name: str) -> str:
@@ -60,9 +128,15 @@ def recipe_diet(ingredients, tags=None) -> str:
 
 
 _DIET_ALIASES = {
-    "veg": VEG, "vegetarian": VEG,
-    "egg": EGG, "eggetarian": EGG, "ovo": EGG,
-    "non-veg": NON_VEG, "non_veg": NON_VEG, "nonveg": NON_VEG, "non-vegetarian": NON_VEG,
+    "veg": VEG,
+    "vegetarian": VEG,
+    "egg": EGG,
+    "eggetarian": EGG,
+    "ovo": EGG,
+    "non-veg": NON_VEG,
+    "non_veg": NON_VEG,
+    "nonveg": NON_VEG,
+    "non-vegetarian": NON_VEG,
 }
 
 

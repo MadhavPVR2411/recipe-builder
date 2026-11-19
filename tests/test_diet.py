@@ -1,36 +1,47 @@
 import pytest
 
-from app.services.diet import EGG, NON_VEG, VEG, allowed_diets, ingredient_diet, normalize_diet, recipe_diet
+from app.services.diet import (
+    EGG,
+    NON_VEG,
+    VEG,
+    allowed_diets,
+    ingredient_diet,
+    normalize_diet,
+    recipe_diet,
+)
 
 
-@pytest.mark.parametrize("name, expected", [
-    # plain cases
-    ("chicken breast", NON_VEG),
-    ("ground beef", NON_VEG),
-    ("prawns", NON_VEG),
-    ("eggs", EGG),
-    ("egg yolks", EGG),
-    ("paneer", VEG),
-    ("onion", VEG),
-    # false-positive traps
-    ("eggplant", VEG),
-    ("graham crackers", VEG),
-    ("champagne", VEG),
-    ("crab apples", VEG),
-    ("duck sauce", VEG),
-    ("vegetable broth", VEG),
-    ("vegan sausage", VEG),
-    ("imitation crab", VEG),
-    ("eggless mayonnaise", VEG),
-    ("minced garlic", VEG),
-    # hidden animal products
-    ("fish sauce", NON_VEG),
-    ("gelatin", NON_VEG),
-    ("worcestershire sauce", NON_VEG),
-    ("chicken stock", NON_VEG),
-    ("lard", NON_VEG),
-    ("mayonnaise", EGG),
-])
+@pytest.mark.parametrize(
+    "name, expected",
+    [
+        # plain cases
+        ("chicken breast", NON_VEG),
+        ("ground beef", NON_VEG),
+        ("prawns", NON_VEG),
+        ("eggs", EGG),
+        ("egg yolks", EGG),
+        ("paneer", VEG),
+        ("onion", VEG),
+        # false-positive traps
+        ("eggplant", VEG),
+        ("graham crackers", VEG),
+        ("champagne", VEG),
+        ("crab apples", VEG),
+        ("duck sauce", VEG),
+        ("vegetable broth", VEG),
+        ("vegan sausage", VEG),
+        ("imitation crab", VEG),
+        ("eggless mayonnaise", VEG),
+        ("minced garlic", VEG),
+        # hidden animal products
+        ("fish sauce", NON_VEG),
+        ("gelatin", NON_VEG),
+        ("worcestershire sauce", NON_VEG),
+        ("chicken stock", NON_VEG),
+        ("lard", NON_VEG),
+        ("mayonnaise", EGG),
+    ],
+)
 def test_ingredient_diet(name, expected):
     assert ingredient_diet(name) == expected
 
@@ -55,12 +66,19 @@ def test_allowed_diets():
     assert allowed_diets("non_veg") == [VEG, EGG, NON_VEG]
 
 
-@pytest.mark.parametrize("raw, expected", [
-    ("veg", VEG), ("Vegetarian", VEG),
-    ("egg", EGG), ("Eggetarian", EGG),
-    ("non-veg", NON_VEG), ("Non_Veg", NON_VEG), ("nonveg", NON_VEG),
-    ("pescatarian", None),
-])
+@pytest.mark.parametrize(
+    "raw, expected",
+    [
+        ("veg", VEG),
+        ("Vegetarian", VEG),
+        ("egg", EGG),
+        ("Eggetarian", EGG),
+        ("non-veg", NON_VEG),
+        ("Non_Veg", NON_VEG),
+        ("nonveg", NON_VEG),
+        ("pescatarian", None),
+    ],
+)
 def test_normalize_diet(raw, expected):
     assert normalize_diet(raw) == expected
 

@@ -1,21 +1,37 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 
 from app.controllers.deps import get_current_user
-from app.dto.pantry import PantryItemCreate, PantryItemUpdate, PantryItemResponse, IngredientOption
+from app.dto.pantry import (
+    IngredientOption,
+    PantryItemCreate,
+    PantryItemResponse,
+    PantryItemUpdate,
+)
 from app.services import pantry as service
-from app.services.exceptions import IngredientNotFoundException, PantryItemNotFoundException, InvalidUnitException
+from app.services.exceptions import (
+    IngredientNotFoundException,
+    InvalidUnitException,
+    PantryItemNotFoundException,
+)
 
 router = APIRouter(prefix="/pantry", tags=["pantry"])
 
 
 @router.post("", response_model=PantryItemResponse, status_code=status.HTTP_201_CREATED)
-def add_item(body: PantryItemCreate, user: dict = Depends(get_current_user)) -> PantryItemResponse:
+def add_item(
+    body: PantryItemCreate, user: dict = Depends(get_current_user)
+) -> PantryItemResponse:
     try:
         return service.add_item(user["id"], body)
     except IngredientNotFoundException:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Ingredient not found")
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, detail="Ingredient not found"
+        )
     except InvalidUnitException as e:
-        raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=str(e))
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=str(e)
+        )
+
 
 @router.get("", response_model=list[PantryItemResponse])
 def list_items(user: dict = Depends(get_current_user)) -> list[PantryItemResponse]:
@@ -28,11 +44,15 @@ def list_ingredients(user: dict = Depends(get_current_user)) -> list[IngredientO
 
 
 @router.patch("/{item_id}", response_model=PantryItemResponse)
-def update_item(item_id: int, body: PantryItemUpdate, user: dict = Depends(get_current_user)) -> PantryItemResponse:
+def update_item(
+    item_id: int, body: PantryItemUpdate, user: dict = Depends(get_current_user)
+) -> PantryItemResponse:
     try:
         return service.update_item(user["id"], item_id, body)
     except PantryItemNotFoundException:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Pantry item not found")
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, detail="Pantry item not found"
+        )
 
 
 @router.delete("/{item_id}", status_code=status.HTTP_204_NO_CONTENT)
@@ -40,4 +60,6 @@ def delete_item(item_id: int, user: dict = Depends(get_current_user)) -> None:
     try:
         service.delete_item(user["id"], item_id)
     except PantryItemNotFoundException:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Pantry item not found")
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, detail="Pantry item not found"
+        )

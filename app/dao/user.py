@@ -1,4 +1,4 @@
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 from sqlalchemy import select
 
@@ -11,7 +11,11 @@ def find_by_username(username: str) -> dict | None:
         user = session.scalar(select(User).where(User.username == username))
         if user is None:
             return None
-        return {"id": user.id, "username": user.username, "password_hash": user.password_hash}
+        return {
+            "id": user.id,
+            "username": user.username,
+            "password_hash": user.password_hash,
+        }
 
 
 def find_by_id(user_id: int) -> dict | None:
@@ -31,11 +35,15 @@ def create_user(username: str, password_hash: str) -> dict:
         session.add(profile)
         session.flush()
         session.refresh(profile)
-        return {"id": user.id, "username": user.username, "diet_type": profile.diet_type}
+        return {
+            "id": user.id,
+            "username": user.username,
+            "diet_type": profile.diet_type,
+        }
 
 
 def touch_last_login(user_id: int) -> dict:
     with get_session() as session:
         profile = session.get(UserProfile, user_id)
-        profile.last_login_at = datetime.now(timezone.utc)
+        profile.last_login_at = datetime.now(UTC)
         return {"diet_type": profile.diet_type, "last_login_at": profile.last_login_at}

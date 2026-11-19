@@ -41,7 +41,9 @@ def find_by_ingredient(user_id: int, ingredient_id: int) -> dict | None:
     with get_session() as session:
         item = session.scalar(
             select(PantryItem)
-            .where(PantryItem.user_id == user_id, PantryItem.ingredient_id == ingredient_id)
+            .where(
+                PantryItem.user_id == user_id, PantryItem.ingredient_id == ingredient_id
+            )
             .order_by(PantryItem.id)
         )
         if item is None:
@@ -49,7 +51,13 @@ def find_by_ingredient(user_id: int, ingredient_id: int) -> dict | None:
         return _to_dict(item)
 
 
-def add_item(user_id: int, ingredient_id: int, quantity: float, unit: str, expiry_date: date | None = None) -> dict:
+def add_item(
+    user_id: int,
+    ingredient_id: int,
+    quantity: float,
+    unit: str,
+    expiry_date: date | None = None,
+) -> dict:
     with get_session() as session:
         item = PantryItem(
             user_id=user_id,
@@ -92,10 +100,12 @@ def delete_item(user_id: int, item_id: int) -> bool:
         session.delete(item)
         return True
 
+
 def ingredient_ids(user_id: int) -> set[int]:
     with get_session() as session:
         rows = session.scalars(
-            select(PantryItem.ingredient_id)
-            .where(PantryItem.user_id == user_id, PantryItem.quantity > 0)
+            select(PantryItem.ingredient_id).where(
+                PantryItem.user_id == user_id, PantryItem.quantity > 0
+            )
         ).all()
         return set(rows)
