@@ -5,12 +5,14 @@ from app.dto.recipe import MissingOneSuggestion, RecipeSummary, SuggestionsRespo
 from app.services.diet import allowed_diets
 
 
-def get_suggestions(user_id: int) -> SuggestionsResponse:
+def get_suggestions(
+    user_id: int, cuisine: str | None = None, max_time: int | None = None
+) -> SuggestionsResponse:
     profile = profile_dao.get_profile(user_id)
     diet = profile["diet_type"] if profile is not None else "non_veg"
 
     pantry_ids = pantry_dao.ingredient_ids(user_id)
-    recipes = recipe_dao.list_with_ingredients(allowed_diets(diet))
+    recipes = recipe_dao.list_with_ingredients(allowed_diets(diet), cuisine, max_time)
 
     can_make = []
     missing_one = []

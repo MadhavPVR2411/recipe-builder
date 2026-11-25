@@ -39,6 +39,7 @@ def find_by_id(recipe_id: int) -> dict | None:
             "cook_time": recipe.cook_time,
             "ingredients": [
                 {
+                    "ingredient_id": ri.ingredient_id,
                     "name": ri.ingredient.name,
                     "quantity": float(ri.quantity),
                     "unit": ri.unit,
@@ -49,11 +50,22 @@ def find_by_id(recipe_id: int) -> dict | None:
         }
 
 
-def list_with_ingredients(diet_types: list[str]) -> list[dict]:
+def list_with_ingredients(
+    diet_types: list[str],
+    cuisine: str | None = None,
+    max_time: int | None = None,
+) -> list[dict]:
     with get_session() as session:
-        recipes = session.scalars(
-            select(Recipe).where(Recipe.diet_type.in_(diet_types))
-        ).all()
+        query = (
+            select(Recipe)
+            .where(Recipe.diet_type.in_(diet_types))
+            .order_by(Recipe.total_time, Recipe.name)
+        )
+        if cuisine is not None:
+            query = query.where(Recipe.cuisine == cuisine)
+        if max_time is not None:
+            query = query.where(Recipe.total_time <= max_time)
+        recipes = session.scalars(query).all()
 
         result = []
         for recipe in recipes:

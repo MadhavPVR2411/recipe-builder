@@ -7,8 +7,8 @@ import Recipes from './recipes/Recipes'
 import Profile from './profile/Profile'
 
 const TABS = [
+  { id: 'home', label: 'Home' },
   { id: 'pantry', label: 'Pantry' },
-  { id: 'cook', label: 'What can I cook?' },
   { id: 'recipes', label: 'Recipes' },
   { id: 'profile', label: 'Profile' },
 ]
@@ -16,12 +16,12 @@ const TABS = [
 export default function App() {
   const [loggedIn, setLoggedIn] = useState(!!localStorage.getItem('token'))
   const [showSignup, setShowSignup] = useState(false)
-  const [tab, setTab] = useState('pantry')
+  const [tab, setTab] = useState('home')
 
   function logout() {
     localStorage.removeItem('token')
     setLoggedIn(false)
-    setTab('pantry')
+    setTab('home')
   }
 
   if (!loggedIn) {
@@ -61,8 +61,8 @@ export default function App() {
       </header>
 
       <main className="bg-card border rounded-2xl shadow-sm p-6">
+        {tab === 'home' && <Suggestions />}
         {tab === 'pantry' && <Pantry />}
-        {tab === 'cook' && <Suggestions />}
         {tab === 'recipes' && <Recipes />}
         {tab === 'profile' && <Profile onLogout={logout} />}
       </main>

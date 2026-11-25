@@ -13,4 +13,8 @@ venv/
 .DS_Store
 .claude/
 .junie/
+.codex/
 .mcp.json
+
+# node
+node_modules/

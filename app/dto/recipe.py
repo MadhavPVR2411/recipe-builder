@@ -14,6 +14,7 @@ class RecipeIngredientResponse(BaseModel):
     name: str
     quantity: float
     unit: str
+    in_pantry: bool | None = None
 
 
 class RecipeDetail(RecipeSummary):
