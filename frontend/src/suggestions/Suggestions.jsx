@@ -91,7 +91,7 @@ export default function Suggestions() {
 
       {nothing ? (
         <p className="text-center text-muted-foreground py-8">
-          Nothing matches yet. Try another cuisine, give it more time, or add more to your pantry.
+          No recipes match. Try other filters.
         </p>
       ) : (
         <>

@@ -1,17 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
 import { api } from '../api'
 
-// show big amounts in the larger unit, e.g. 1700 g -> 1.7 kg
 function formatAmount(quantity, unit) {
   if (unit === 'g' && quantity >= 1000) return `${quantity / 1000} kg`
   if (unit === 'ml' && quantity >= 1000) return `${quantity / 1000} litre`
   return `${quantity} ${unit}`
 }
 
-// sensible starting amount for each unit, so the quantity box is pre-filled
 const DEFAULT_AMOUNT = {pcs: 1, g: 100, kg: 1, ml: 100, litre: 1}
 
-// common ingredients offered as one-click buttons
 const STAPLES = ['salt', 'olive oil', 'onion', 'garlic', 'tomato', 'potato', 'rice', 'egg', 'milk', 'butter', 'flour', 'sugar']
 
 function formatDate(value) {
@@ -153,7 +150,7 @@ export default function Pantry() {
 
       {sorted.length === 0 ? (
         <p className="text-center text-muted-foreground py-8">
-          Your pantry is empty. Add what you have at home to see what you can cook.
+          Your pantry is empty.
         </p>
       ) : (
         <ul className="divide-y border rounded-xl overflow-hidden">

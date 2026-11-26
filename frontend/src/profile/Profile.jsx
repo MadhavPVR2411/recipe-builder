@@ -87,7 +87,6 @@ export default function Profile({ onLogout }) {
           <div className="pt-14 px-6 pb-6 space-y-4">
             <div>
               <h2 className="text-xl mb-0">{me.username}</h2>
-              <p className="text-sm text-muted-foreground">Recipe Book member</p>
             </div>
 
             <div className="bg-muted/15 rounded-xl p-4 space-y-5 text-sm">

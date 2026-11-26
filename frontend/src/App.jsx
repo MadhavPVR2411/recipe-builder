@@ -27,7 +27,7 @@ export default function App() {
   if (!loggedIn) {
     return (
       <div className="max-w-md mx-auto mt-24 bg-card border rounded-2xl shadow-md p-6 space-y-4">
-        <h1>Recipe Book</h1>
+        <h1>Recipe Builder</h1>
         {showSignup
           ? <Signup onDone={() => setShowSignup(false)} />
           : (
@@ -46,7 +46,7 @@ export default function App() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-8 space-y-6">
       <header className="flex flex-wrap items-center justify-between gap-4">
-        <h1>Recipe Book</h1>
+        <h1>Recipe Builder</h1>
         <nav className="flex flex-wrap gap-2">
           {TABS.map(t => (
             <button

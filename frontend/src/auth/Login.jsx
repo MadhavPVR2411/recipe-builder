@@ -24,7 +24,7 @@ export default function Login({ onLogin }) {
       <input placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} />
       <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
       <button type="submit">Log in</button>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      {error && <p className="text-sm text-destructive">{error}</p>}
     </form>
   )
 }

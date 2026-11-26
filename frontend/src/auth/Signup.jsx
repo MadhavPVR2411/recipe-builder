@@ -25,7 +25,7 @@ export default function Signup({ onDone }) {
       <input type="password" placeholder="Password (min 8)" value={password} onChange={e => setPassword(e.target.value)} />
       <button type="submit">Sign up</button>
       <p>Already have an account? <button type="button" onClick={onDone}>Log in</button></p>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      {error && <p className="text-sm text-destructive">{error}</p>}
     </form>
   )
 }

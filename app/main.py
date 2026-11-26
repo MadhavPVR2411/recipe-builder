@@ -13,7 +13,7 @@ FRONTEND_DIST = Path(__file__).resolve().parent.parent / "frontend" / "dist"
 
 
 def create_app() -> FastAPI:
-    app = FastAPI(title="Recipe Book")
+    app = FastAPI(title="Recipe Builder")
     app.include_router(auth_router)
     app.include_router(profile_router)
     app.include_router(recipe_router)
